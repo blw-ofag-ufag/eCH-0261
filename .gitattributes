@@ -27,6 +27,9 @@
 *.groovy text
 *.gvy text
 *.gsh text
+*.puml text
+*.drawio text
+
 
 # These files are binary and should be left untouched
 # (binary is a macro for -text -diff)
@@ -41,15 +44,10 @@
 *.png           binary
 *.so            binary
 *.war           binary
-*.crt           binary
-*.mp4           binary
 *.pdf           binary
+*.xlsx          binary
+*.xls           binary
 *.docx          binary
-*.drawio        binary
-*.bpmn          binary
-*.dmn           binary
+*.doc           binary
+*.zip           binary
 
-
-
-# lfs
-*.gz filter=lfs diff=lfs merge=lfs -text

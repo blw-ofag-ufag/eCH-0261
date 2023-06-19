@@ -2,25 +2,15 @@
 /**/bin
 /**/.jsdtscope
 /**/.DS_Store
-/Docker/**/*.gz
-/Docker/**/*.zip
 /**/*.rar
 /**/*.ear
 /**/*.war
 /*.zip
 /*.zip.*
 
-
-/*/pom.xml.bak
-
 *.iml
 .idea/
-
-update_hoduflu_*.sql*.log
-database/src/main/resources/integrationsumgebung/*.log
 
 .project
 .classpath
 .settings/
-/hoduflu-batch/pom.xml.bak
-/pom.xml.bak
