@@ -1,6 +1,6 @@
-# eCH-0261
+eCH-0261: Agrardaten -- Betriebs- und Unternehmensstammdaten
 
-This is the repository for technical artefacts related to eCH-0261 Agrardate - Betriebs- und Unternehmensstammdaten. 
+This is the repository for technical artefacts related to this specification.
 Primarily, this repo contains:
 
 * XSDs
