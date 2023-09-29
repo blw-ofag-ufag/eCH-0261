@@ -2,26 +2,21 @@
 <!-- 
 Datum				Version				Autor
 *********************************************
-2022-12-02			Entwurf				Stl
+2023-09-29			Entwurf				Stl
 
-
-HINWEIS:
-Einige Typen sind in der annotation mit einem Stern «(*)» gekennzeichnet. Diese Datentypen werden vor der definitiven Veröffentlichung so angepasst, dass sie auf den neuen Standard aus dem BFS-Antrag verweisen. Dies betrifft Typen in folgenden Elementen:
 -->
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:eCH-0261="http://www.ech.ch/xmlns/eCH-0261/1" xmlns:eCH-0007="http://www.ech.ch/xmlns/eCH-0007/6" xmlns:eCH-0008="http://www.ech.ch/xmlns/eCH-0008/3" xmlns:eCH-0010="http://www.ech.ch/xmlns/eCH-0010/7" xmlns:eCH-0011="http://www.ech.ch/xmlns/eCH-0011/8" xmlns:eCH-0044="http://www.ech.ch/xmlns/eCH-0044/4" xmlns:eCH-0046="http://www.ech.ch/xmlns/eCH-0046/5" xmlns:eCH-0097="http://www.ech.ch/xmlns/eCH-0097/6" xmlns:eCH-0098="http://www.ech.ch/xmlns/eCH-0098/6" xmlns:eCH-0115="http://www.ech.ch/xmlns/eCH-0115/1" targetNamespace="http://www.ech.ch/xmlns/eCH-0261/1" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:eCH-0261="http://www.ech.ch/xmlns/eCH-0261/1" xmlns:eCH-0007="http://www.ech.ch/xmlns/eCH-0007/6" xmlns:eCH-0008="http://www.ech.ch/xmlns/eCH-0008/3" xmlns:eCH-0010="http://www.ech.ch/xmlns/eCH-0010/8" xmlns:eCH-0011="http://www.ech.ch/xmlns/eCH-0011/9" xmlns:eCH-0044="http://www.ech.ch/xmlns/eCH-0044/4" xmlns:eCH-0046="http://www.ech.ch/xmlns/eCH-0046/6" xmlns:eCH-0108="http://www.ech.ch/xmlns/eCH-0108/7" targetNamespace="http://www.ech.ch/xmlns/eCH-0261/1" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
 	<xs:annotation>
 		<xs:documentation xml:lang="de">Betriebs- und Unternehmensstammdaten</xs:documentation>
 		<xs:documentation xml:lang="en">Site and Enterprise Master Data</xs:documentation>
 	</xs:annotation>
 	<xs:import namespace="http://www.ech.ch/xmlns/eCH-0007/6" schemaLocation="http://www.ech.ch/xmlns/eCH-0007/6/eCH-0007-6-0.xsd"/>
 	<xs:import namespace="http://www.ech.ch/xmlns/eCH-0008/3" schemaLocation="http://www.ech.ch/xmlns/eCH-0008/3/eCH-0008-3-0.xsd"/>
-	<xs:import namespace="http://www.ech.ch/xmlns/eCH-0010/7" schemaLocation="http://www.ech.ch/xmlns/eCH-0010/7/eCH-0010-7-0.xsd"/>
-	<xs:import namespace="http://www.ech.ch/xmlns/eCH-0011/8" schemaLocation="http://www.ech.ch/xmlns/eCH-0011/8/eCH-0011-8-1.xsd"/>
+	<xs:import namespace="http://www.ech.ch/xmlns/eCH-0010/8" schemaLocation="http://www.ech.ch/xmlns/eCH-0010/8/eCH-0010-8-0.xsd"/>
+	<xs:import namespace="http://www.ech.ch/xmlns/eCH-0011/9" schemaLocation="http://www.ech.ch/xmlns/eCH-0011/9/eCH-0011-9-0.xsd"/>
 	<xs:import namespace="http://www.ech.ch/xmlns/eCH-0044/4" schemaLocation="http://www.ech.ch/xmlns/eCH-0044/4/eCH-0044-4-1.xsd"/>
-	<xs:import namespace="http://www.ech.ch/xmlns/eCH-0046/5" schemaLocation="http://www.ech.ch/xmlns/eCH-0046/5/eCH-0046-5-0.xsd"/>
-	<xs:import namespace="http://www.ech.ch/xmlns/eCH-0097/6" schemaLocation="http://www.ech.ch/xmlns/eCH-0097/6/eCH-0097-6-0.xsd"/>
-	<xs:import namespace="http://www.ech.ch/xmlns/eCH-0098/6" schemaLocation="http://www.ech.ch/xmlns/eCH-0098/6/eCH-0098-6-0.xsd"/>
-	<xs:import namespace="http://www.ech.ch/xmlns/eCH-0115/1" schemaLocation="http://www.ech.ch/xmlns/eCH-0115/1/eCH-0115-1-0.xsd"/>
+	<xs:import namespace="http://www.ech.ch/xmlns/eCH-0046/6" schemaLocation="http://www.ech.ch/xmlns/eCH-0046/6/eCH-0046-6-0.xsd"/>
+	<xs:import namespace="http://www.ech.ch/xmlns/eCH-0108/7" schemaLocation="./eCH-0108-7-0.xsd"/>
 	<!--Hauptdatentypen-->
 	<xs:complexType name="legalUnitType">
 		<xs:annotation>
@@ -29,7 +24,7 @@ Einige Typen sind in der annotation mit einem Stern «(*)» gekennzeichnet. Dies
 			<xs:documentation xml:lang="en">Legal Unit</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="uid" type="eCH-0097:uidStructureType">
+			<xs:element name="uid" type="eCH-0108:uidType">
 				<xs:annotation>
 					<xs:documentation xml:lang="de">UID. Siehe den referenzierten Standard.</xs:documentation>
 					<xs:documentation xml:lang="fr">Voir standard référencé.</xs:documentation>
@@ -37,21 +32,21 @@ Einige Typen sind in der annotation mit einem Stern «(*)» gekennzeichnet. Dies
                     </xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="name" type="eCH-0097:organisationNameType">
+			<xs:element name="name" type="eCH-0108:unitNameType">
 				<xs:annotation>
 					<xs:documentation xml:lang="de">Name. Siehe den referenzierten Standard.</xs:documentation>
 					<xs:documentation xml:lang="fr">Voir standard référencé.</xs:documentation>
 					<xs:documentation xml:lang="en">See the referenced standard.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="additionalName" type="eCH-0097:organisationNameType" minOccurs="0">
+			<xs:element name="additionalName" type="eCH-0108:unitNameType" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="de">Zusatzname. Siehe den referenzierten Standard.</xs:documentation>
 					<xs:documentation xml:lang="fr">Voir standard référencé.</xs:documentation>
 					<xs:documentation xml:lang="en">See the referenced standard.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="translatedName" type="eCH-0097:organisationNameType" minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="translatedName" type="eCH-0108:unitNameType" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation xml:lang="de">Übersetzungen des Namens. Siehe den referenzierten Standard.
                     </xs:documentation>
@@ -59,30 +54,37 @@ Einige Typen sind in der annotation mit einem Stern «(*)» gekennzeichnet. Dies
 					<xs:documentation xml:lang="en">See the referenced standard.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="mainAddress" type="eCH-0098:organisationAddressType">
+			<xs:element name="mainAddress" type="eCH-0108:mainAddressType">
 				<xs:annotation>
-					<xs:documentation xml:lang="de">Hauptadresse (*). Siehe den referenzierten Standard.</xs:documentation>
-					<xs:documentation xml:lang="fr">Voir standard référencé (*).</xs:documentation>
-					<xs:documentation xml:lang="en">Main address (*). See the referenced standard.</xs:documentation>
+					<xs:documentation xml:lang="de">Hauptadresse. Siehe den referenzierten Standard.</xs:documentation>
+					<xs:documentation xml:lang="fr">Voir standard référencé.</xs:documentation>
+					<xs:documentation xml:lang="en">Main address). See the referenced standard.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="additionalAdress" type="eCH-0098:organisationAddressType" minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="additionalLocationAddress" type="eCH-0108:additionalLocationAddressType" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="de">Zusätzliche Adressen (*). Siehe den referenzierten Standard.
+					<xs:documentation xml:lang="de">Zusätzliche lokale Adresse. Siehe den referenzierten Standard.
                     </xs:documentation>
-					<xs:documentation xml:lang="fr">Voir standard référencé (*).</xs:documentation>
-					<xs:documentation xml:lang="en">Additional addresses (*). See the referenced standard.
+					<xs:documentation xml:lang="fr">Voir standard référencé.</xs:documentation>
+					<xs:documentation xml:lang="en">Additional local address. See the referenced standard.
                     </xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="legalForm" type="eCH-0097:legalFormType">
+			<xs:element name="additionalPostOfficeBoxAddress" type="eCH-0108:additionalPostOfficeBoxAddressType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Zusätzliche Postfach Adresse. Siehe den referenzierten Standard.</xs:documentation>
+					<xs:documentation xml:lang="fr">Voir standard référencé.</xs:documentation>
+					<xs:documentation xml:lang="en">Additional PO box address. See the referenced standard.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="legalForm" type="eCH-0108:legalFormType">
 				<xs:annotation>
 					<xs:documentation xml:lang="de">Rechtsform. Siehe den referenzierten Standard.</xs:documentation>
 					<xs:documentation xml:lang="fr">Voir standard référencé.</xs:documentation>
 					<xs:documentation xml:lang="en">See the referenced standard.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="mainuid" type="eCH-0097:uidStructureType">
+			<xs:element name="mainuid" type="eCH-0108:uidType">
 				<xs:annotation>
 					<xs:documentation xml:lang="de">UID der rechtlichen Haupteinheit. Diese unterscheidet sich von der
                         UID, falls es sich bei der rechtlichen Einheit um eine Zweigniederlassung handelt. Handelt es
@@ -144,7 +146,7 @@ Einige Typen sind in der annotation mit einem Stern «(*)» gekennzeichnet. Dies
 			<xs:documentation xml:lang="en">Specific agricultural characteristics of the legal unit</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="parentLegalUnit" type="eCH-0097:uidStructureType" minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="parentLegalUnit" type="eCH-0108:uidType" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation xml:lang="de">Übergeordnete rechtliche Einheit. Es ist möglich, dass es mehrere
                         übergeordnete rechtliche Einheiten gibt. Dies kann z.B. bei Betriebszweiggemeinschaften und
@@ -158,7 +160,7 @@ Einige Typen sind in der annotation mit einem Stern «(*)» gekennzeichnet. Dies
                     </xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="personPersonFunction" type="eCH-0261:personPersonFunctionType" minOccurs="1" maxOccurs="unbounded">
+			<xs:element name="personWithFunction" type="eCH-0261:personWithFunctionType" minOccurs="1" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation xml:lang="de">Liste der Personen/PersonenFunktionen, die mit dieser Einheit verknüpft sind.</xs:documentation>
 					<xs:documentation xml:lang="fr">Liste de personnes/Rôles associées à cette unité.</xs:documentation>
@@ -186,15 +188,15 @@ Einige Typen sind in der annotation mit einem Stern «(*)» gekennzeichnet. Dies
 			<xs:documentation xml:lang="en">Local Unit. See the referenced standard.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="burnr" type="eCH-0097:namedOrganisationIdType">
+			<xs:element name="burnr" type="eCH-0108:localIdType">
 				<xs:annotation>
-					<xs:documentation xml:lang="de">BUR-Nummer (*). Siehe den referenzierten Standard.</xs:documentation>
-					<xs:documentation xml:lang="fr">Voir standard référencé (*).</xs:documentation>
-					<xs:documentation xml:lang="en">A unique identifier of a local unit (*). See the referenced standard.
+					<xs:documentation xml:lang="de">BUR-Nummer. Siehe den referenzierten Standard.</xs:documentation>
+					<xs:documentation xml:lang="fr">Voir standard référencé.</xs:documentation>
+					<xs:documentation xml:lang="en">A unique identifier of a local unit. See the referenced standard.
                     </xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="legalUnitAffiliation" type="eCH-0097:uidStructureType">
+			<xs:element name="legalUnitAffiliation" type="eCH-0108:uidType">
 				<xs:annotation>
 					<xs:documentation xml:lang="de">Zugehörigkeit zu einer rechtlichen Einheit: Verweis auf UID der
                         rechtlichen Einheit
@@ -205,41 +207,53 @@ Einige Typen sind in der annotation mit einem Stern «(*)» gekennzeichnet. Dies
                     </xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="name" type="eCH-0097:organisationNameType">
+			<xs:element name="name" type="eCH-0108:unitNameType">
 				<xs:annotation>
-					<xs:documentation xml:lang="de">Name (*). Siehe den referenzierten Standard.</xs:documentation>
-					<xs:documentation xml:lang="fr">Voir standard référencé (*).</xs:documentation>
-					<xs:documentation xml:lang="en">Name (*). See the referenced standard.</xs:documentation>
+					<xs:documentation xml:lang="de">Name. Siehe den referenzierten Standard.</xs:documentation>
+					<xs:documentation xml:lang="fr">Voir standard référencé.</xs:documentation>
+					<xs:documentation xml:lang="en">Name. See the referenced standard.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="additionalName" type="eCH-0097:organisationNameType" minOccurs="0">
+			<xs:element name="additionalName" type="eCH-0108:unitNameType" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="de">Zusatznamen (*). Siehe den referenzierten Standard.</xs:documentation>
-					<xs:documentation xml:lang="fr">Voir standard référencé (*).</xs:documentation>
-					<xs:documentation xml:lang="en">Additional name (*). See the referenced standard.</xs:documentation>
+					<xs:documentation xml:lang="de">Zusatznamen. Siehe den referenzierten Standard.</xs:documentation>
+					<xs:documentation xml:lang="fr">Voir standard référencé.</xs:documentation>
+					<xs:documentation xml:lang="en">Additional name. See the referenced standard.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="mainAddress" type="eCH-0098:organisationAddressType">
+			<xs:element name="mainAddress" type="eCH-0108:mainAddressType">
 				<xs:annotation>
-					<xs:documentation xml:lang="de">Hauptadresse (*). Siehe den referenzierten Standard.</xs:documentation>
-					<xs:documentation xml:lang="fr">Voir standard référencé (*).</xs:documentation>
-					<xs:documentation xml:lang="en">Main address (*). See the referenced standard.</xs:documentation>
+					<xs:documentation xml:lang="de">Hauptadresse. Siehe den referenzierten Standard.</xs:documentation>
+					<xs:documentation xml:lang="fr">Voir standard référencé.</xs:documentation>
+					<xs:documentation xml:lang="en">Main address). See the referenced standard.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="additionalAdress" type="eCH-0098:organisationAddressType" minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="additionalLocationAddress" type="eCH-0108:additionalLocationAddressType" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="de">Zusätzliche Adressen (*). Siehe den referenzierten Standard.
-                    </xs:documentation>
-					<xs:documentation xml:lang="fr">Voir standard référencé (*).</xs:documentation>
-					<xs:documentation xml:lang="en">Additional addresses (*). See the referenced standard.
-                    </xs:documentation>
+					<xs:documentation xml:lang="de">Zusätzliche lokale Adresse. Siehe den referenzierten Standard.                    </xs:documentation>
+					<xs:documentation xml:lang="fr">Voir standard référencé.</xs:documentation>
+					<xs:documentation xml:lang="en">Additional local address. See the referenced standard.                    </xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="nogaCode" type="eCH-0115:nogaCodeFullType" minOccurs="0">
+			<xs:element name="additionalPostOfficeBoxAddress" type="eCH-0108:additionalPostOfficeBoxAddressType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Zusätzliche Postfach Adresse. Siehe den referenzierten Standard.</xs:documentation>
+					<xs:documentation xml:lang="fr">Voir standard référencé.</xs:documentation>
+					<xs:documentation xml:lang="en">Additional PO box address. See the referenced standard.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nogaCode" type="eCH-0108:nogaCodeType" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="de">NOGA-Code. Siehe den referenzierten Standard.</xs:documentation>
 					<xs:documentation xml:lang="fr">NOGA-Code. Voir standard référencé.</xs:documentation>
 					<xs:documentation xml:lang="en">NOGA-Code. See the referenced standard.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nogaVersion" type="eCH-0108:nogaVersionType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">NOGA-Version. Zwingend, wenn ein NOGA-Code angegeben wird.</xs:documentation>
+					<xs:documentation xml:lang="fr">NOGA-Version.</xs:documentation>
+					<xs:documentation xml:lang="en">NOGA-Version.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="status" type="eCH-0261:localUnitStatusType">
@@ -275,11 +289,11 @@ Einige Typen sind in der annotation mit einem Stern «(*)» gekennzeichnet. Dies
 			<xs:documentation xml:lang="en">Specific agricultural characteristics of the local unit</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="parentLocalUnit" type="eCH-0097:namedOrganisationIdType" minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="parentLocalUnit" type="eCH-0108:localIdType" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation xml:lang="de">Übergeordnete örtliche Einheiten (*)</xs:documentation>
-					<xs:documentation xml:lang="fr">Unité locale parente (*)</xs:documentation>
-					<xs:documentation xml:lang="en">Parent local unit (*)</xs:documentation>
+					<xs:documentation xml:lang="de">Übergeordnete örtliche Einheiten</xs:documentation>
+					<xs:documentation xml:lang="fr">Unité locale parente</xs:documentation>
+					<xs:documentation xml:lang="en">Parent local unit</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="farmType" type="eCH-0261:farmTypeType" minOccurs="0">
@@ -289,7 +303,7 @@ Einige Typen sind in der annotation mit einem Stern «(*)» gekennzeichnet. Dies
 					<xs:documentation xml:lang="en">Form of agricultural development</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="inspectionOrganisation" type="eCH-0097:uidStructureType" minOccurs="0">
+			<xs:element name="inspectionOrganisation" type="eCH-0108:uidType" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="de">Unternehmen, das für die Kontrollen verantwortlich ist
                     </xs:documentation>
@@ -329,7 +343,7 @@ Einige Typen sind in der annotation mit einem Stern «(*)» gekennzeichnet. Dies
 					<xs:documentation xml:lang="en">See the referenced type.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="personPersonFunction" type="eCH-0261:personPersonFunctionType" minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="personPersonFunction" type="eCH-0261:personWithFunctionType" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation xml:lang="de">Person/Function</xs:documentation>
 					<xs:documentation xml:lang="fr">Personne/Fonction</xs:documentation>
@@ -341,20 +355,6 @@ Einige Typen sind in der annotation mit einem Stern «(*)» gekennzeichnet. Dies
 					<xs:documentation xml:lang="de">Gültig ab (inklusiv)</xs:documentation>
 					<xs:documentation xml:lang="fr">Valable à partir de (inclus)</xs:documentation>
 					<xs:documentation xml:lang="en">Valid From, inclusive. This enables an audit trail and versioning.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="status">
-				<xs:annotation>
-					<xs:documentation xml:lang="de">Status</xs:documentation>
-					<xs:documentation xml:lang="en">Status</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="statusDate" type="xs:date">
-				<xs:annotation>
-					<xs:documentation xml:lang="de">Datum des Status</xs:documentation>
-					<xs:documentation xml:lang="en">The beginning date as of which an instance based on this definition
-                        enters into force. This enables an audit trail and versioning.
-                    </xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
@@ -384,6 +384,32 @@ Einige Typen sind in der annotation mit einem Stern «(*)» gekennzeichnet. Dies
 				</xs:simpleType>
 			</xs:element>
 		</xs:choice>
+	</xs:complexType>
+	<xs:complexType name="personIdentifierType">
+		<xs:annotation>
+			<xs:documentation xml:lang="de">Personenidentifikator</xs:documentation>
+			<xs:documentation xml:lang="en">A person identifier</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:choice>
+				<xs:element name="vn" type="eCH-0044:vnType"/>
+				<xs:element name="eiam">
+					<xs:simpleType>
+						<xs:restriction base="xs:token">
+							<xs:maxLength value="36"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="uuid">
+					<xs:simpleType>
+						<xs:restriction base="xs:token">
+							<xs:maxLength value="36"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="email" type="eCH-0046:emailAddressType"/>
+			</xs:choice>
+		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="personType">
 		<xs:annotation>
@@ -455,7 +481,7 @@ Einige Typen sind in der annotation mit einem Stern «(*)» gekennzeichnet. Dies
 					<xs:documentation xml:lang="en">Date of birth</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="addressForCorrespondence" type="eCH-0046:addressType">
+			<xs:element name="addressForCorrespondence" type="eCH-0010:addressInformationType">
 				<xs:annotation>
 					<xs:documentation xml:lang="de">Korrespondenzadresse</xs:documentation>
 					<xs:documentation xml:lang="fr">Voir standard référencé.</xs:documentation>
@@ -473,9 +499,9 @@ Einige Typen sind in der annotation mit einem Stern «(*)» gekennzeichnet. Dies
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
-	<xs:complexType name="personPersonFunctionType">
+	<xs:complexType name="personWithFunctionType">
 		<xs:annotation>
-			<xs:documentation xml:lang="de">Person mit zugehöriger Rolle</xs:documentation>
+			<xs:documentation xml:lang="de">Person mit Funktion</xs:documentation>
 			<xs:documentation xml:lang="de">Personne avec rôle associé</xs:documentation>
 			<xs:documentation xml:lang="en">A person mapped to a role. The relationship of a person to a PersonFunction.
                 This is useful for communications in which assignments are provided by or shared with systems other than
@@ -483,20 +509,18 @@ Einige Typen sind in der annotation mit einem Stern «(*)» gekennzeichnet. Dies
             </xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:choice>
+			<xs:element name="personIdentifier" type="eCH-0261:personIdentifierType" minOccurs="1">
 				<xs:annotation>
-					<xs:documentation xml:lang="de">Verweis auf Person</xs:documentation>
-					<xs:documentation xml:lang="fr">Référence à une personne</xs:documentation>
-					<xs:documentation xml:lang="en">Reference to a person</xs:documentation>
+					<xs:documentation xml:lang="de">Identifikator der Person</xs:documentation>
+					<xs:documentation xml:lang="fr">Identificateur de la personne</xs:documentation>
+					<xs:documentation xml:lang="en">identifier of a person</xs:documentation>
 				</xs:annotation>
-				<xs:element name="vn" type="eCH-0044:vnType"/>
-				<xs:element name="namedPersonId" type="eCH-0044:namedPersonIdType"/>
-			</xs:choice>
-			<xs:element name="role" type="eCH-0261:personFunctionType" minOccurs="1" maxOccurs="unbounded">
+			</xs:element>
+			<xs:element name="personFunction" type="eCH-0261:personFunctionType" minOccurs="1" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation xml:lang="de">Rollen der Person</xs:documentation>
-					<xs:documentation xml:lang="fr">Rôles de la personne</xs:documentation>
-					<xs:documentation xml:lang="en">The roles of a person</xs:documentation>
+					<xs:documentation xml:lang="de">Funktionen der Person</xs:documentation>
+					<xs:documentation xml:lang="fr">Fonctions de la personne</xs:documentation>
+					<xs:documentation xml:lang="en">Functions of a person</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
@@ -677,20 +701,20 @@ Einige Typen sind in der annotation mit einem Stern «(*)» gekennzeichnet. Dies
             </xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:token">
-			<xs:enumeration value="g">
+			<xs:enumeration value="kg">
 				<xs:annotation>
-					<xs:documentation xml:lang="de">Gramm</xs:documentation>
-					<xs:documentation xml:lang="fr">gramme</xs:documentation>
-					<xs:documentation xml:lang="it">grammo</xs:documentation>
-					<xs:documentation xml:lang="en">gram</xs:documentation>
+					<xs:documentation xml:lang="de">Kilogramm</xs:documentation>
+					<xs:documentation xml:lang="fr">kilogramme</xs:documentation>
+					<xs:documentation xml:lang="it">kilogrammo</xs:documentation>
+					<xs:documentation xml:lang="en">kilogram</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="l">
+			<xs:enumeration value="m3">
 				<xs:annotation>
-					<xs:documentation xml:lang="de">Liter</xs:documentation>
-					<xs:documentation xml:lang="fr">litre</xs:documentation>
-					<xs:documentation xml:lang="it">litro</xs:documentation>
-					<xs:documentation xml:lang="en">litre</xs:documentation>
+					<xs:documentation xml:lang="de">Kubikmeter</xs:documentation>
+					<xs:documentation xml:lang="fr">mètres cube</xs:documentation>
+					<xs:documentation xml:lang="it">metri cubi</xs:documentation>
+					<xs:documentation xml:lang="en">cubic metres</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="pc">
@@ -741,20 +765,20 @@ Einige Typen sind in der annotation mit einem Stern «(*)» gekennzeichnet. Dies
 					<xs:documentation xml:lang="en">percent</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="g/l">
+			<xs:enumeration value="kg/m3">
 				<xs:annotation>
-					<xs:documentation xml:lang="de">Gramm/Liter</xs:documentation>
-					<xs:documentation xml:lang="fr">gramme/litre</xs:documentation>
-					<xs:documentation xml:lang="it">grammo/litro</xs:documentation>
-					<xs:documentation xml:lang="en">gram/litre</xs:documentation>
+					<xs:documentation xml:lang="de">Kilogramm/Kubikmeter</xs:documentation>
+					<xs:documentation xml:lang="fr">kilogramme/mètre cube</xs:documentation>
+					<xs:documentation xml:lang="it">kilogrammo/metro cubo</xs:documentation>
+					<xs:documentation xml:lang="en">kilogram/cubic metre</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="g/pc">
+			<xs:enumeration value="kg/pc">
 				<xs:annotation>
-					<xs:documentation xml:lang="de">Gramm/Stück</xs:documentation>
-					<xs:documentation xml:lang="fr">gramme/pièce</xs:documentation>
-					<xs:documentation xml:lang="it">grammo/litro</xs:documentation>
-					<xs:documentation xml:lang="en">gram/litre</xs:documentation>
+					<xs:documentation xml:lang="de">KiloGramm/Stück</xs:documentation>
+					<xs:documentation xml:lang="fr">kilogramme/pièce</xs:documentation>
+					<xs:documentation xml:lang="it">kilogrammo/litro</xs:documentation>
+					<xs:documentation xml:lang="en">kilogram/litre</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="n/a">
@@ -775,7 +799,7 @@ Einige Typen sind in der annotation mit einem Stern «(*)» gekennzeichnet. Dies
 					<xs:documentation xml:lang="en">square metre</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="g/m2">
+			<xs:enumeration value="kg/m2">
 				<xs:annotation>
 					<xs:documentation xml:lang="de">Gramm/Quadratmeter</xs:documentation>
 					<xs:documentation xml:lang="fr">gramme/mètres carrés</xs:documentation>
