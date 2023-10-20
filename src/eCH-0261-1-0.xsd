@@ -2,7 +2,7 @@
 <!-- 
 Datum				Version				Autor
 *********************************************
-2023-09-29			Entwurf				Stl
+2023-10-20			Entwurf				Stl
 
 -->
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:eCH-0261="http://www.ech.ch/xmlns/eCH-0261/1" xmlns:eCH-0007="http://www.ech.ch/xmlns/eCH-0007/6" xmlns:eCH-0008="http://www.ech.ch/xmlns/eCH-0008/3" xmlns:eCH-0010="http://www.ech.ch/xmlns/eCH-0010/8" xmlns:eCH-0011="http://www.ech.ch/xmlns/eCH-0011/9" xmlns:eCH-0044="http://www.ech.ch/xmlns/eCH-0044/4" xmlns:eCH-0046="http://www.ech.ch/xmlns/eCH-0046/6" xmlns:eCH-0108="http://www.ech.ch/xmlns/eCH-0108/7" targetNamespace="http://www.ech.ch/xmlns/eCH-0261/1" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
@@ -84,7 +84,7 @@ Datum				Version				Autor
 					<xs:documentation xml:lang="en">See the referenced standard.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="mainuid" type="eCH-0108:uidType">
+			<xs:element name="mainUid" type="eCH-0108:uidType">
 				<xs:annotation>
 					<xs:documentation xml:lang="de">UID der rechtlichen Haupteinheit. Diese unterscheidet sich von der
                         UID, falls es sich bei der rechtlichen Einheit um eine Zweigniederlassung handelt. Handelt es
@@ -160,7 +160,7 @@ Datum				Version				Autor
                     </xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="personWithFunction" type="eCH-0261:personWithFunctionType" minOccurs="1" maxOccurs="unbounded">
+			<xs:element name="personWithFunction" type="eCH-0261:personWithFunctionType" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation xml:lang="de">Liste der Personen/PersonenFunktionen, die mit dieser Einheit verknüpft sind.</xs:documentation>
 					<xs:documentation xml:lang="fr">Liste de personnes/Rôles associées à cette unité.</xs:documentation>
@@ -188,7 +188,7 @@ Datum				Version				Autor
 			<xs:documentation xml:lang="en">Local Unit. See the referenced standard.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="burnr" type="eCH-0108:localIdType">
+			<xs:element name="localId" type="eCH-0108:localIdType">
 				<xs:annotation>
 					<xs:documentation xml:lang="de">BUR-Nummer. Siehe den referenzierten Standard.</xs:documentation>
 					<xs:documentation xml:lang="fr">Voir standard référencé.</xs:documentation>
@@ -271,7 +271,7 @@ Datum				Version				Autor
                     </xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="agriculturalAdditionToLocalUnit" type="eCH-0261:agriculturalAdditionToLegalUnitType">
+			<xs:element name="agriculturalAdditionToLocalUnit" type="eCH-0261:agriculturalAdditionToLocalUnitType">
 				<xs:annotation>
 					<xs:documentation xml:lang="de">Agrarspezifische Ergänzung der örtlichen Einheit</xs:documentation>
 					<xs:documentation xml:lang="fr">Caractéristiques spécifiques agricoles de l'unité locale.
@@ -289,7 +289,7 @@ Datum				Version				Autor
 			<xs:documentation xml:lang="en">Specific agricultural characteristics of the local unit</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="parentLocalUnit" type="eCH-0108:localIdType" minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="parentLocalId" type="eCH-0108:localIdType" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation xml:lang="de">Übergeordnete örtliche Einheiten</xs:documentation>
 					<xs:documentation xml:lang="fr">Unité locale parente</xs:documentation>
@@ -417,14 +417,13 @@ Datum				Version				Autor
 			<xs:documentation xml:lang="en">A natural person</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:choice minOccurs="0">
+			<xs:element name="personIdentifier" type="eCH-0261:personIdentifierType">
 				<xs:annotation>
-					<xs:documentation xml:lang="de">Identifikator</xs:documentation>
-					<xs:documentation xml:lang="en">Identifier</xs:documentation>
+					<xs:documentation xml:lang="de">Identifikator der Person</xs:documentation>
+					<xs:documentation xml:lang="fr">Identificateur de la personne</xs:documentation>
+					<xs:documentation xml:lang="en">Identifier of the person</xs:documentation>
 				</xs:annotation>
-				<xs:element name="vn" type="eCH-0044:vnType"/>
-				<xs:element name="namedPersonId" type="eCH-0044:namedPersonIdType"/>
-			</xs:choice>
+			</xs:element>
 			<xs:element name="title" type="eCH-0010:titleType" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="de">Titel. Siehe den referenzierten Standard.</xs:documentation>
