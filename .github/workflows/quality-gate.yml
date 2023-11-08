@@ -6,7 +6,7 @@
 # separate terms of service, privacy policy, and support
 # documentation.
 
-name: Java CI with Maven
+name: XSD Quality Gate
 
 on:
   push:
@@ -20,8 +20,26 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
+
     - name: Run a one-line script
       run: echo Hello, world!
+
+    - name: Display environment
+      run: |
+        echo What is in this directory?
+        ls -l 
+        echo 
+        echo What is in the ./src directory?
+        ls -l ./src 
+        echo
+        echo Is Java installed?
+        java --version
+        echo
+        echo Is Git installed~?
+        git --version
+        echo
+        echo What about build tools?
+        mvn --version
 
 
 
