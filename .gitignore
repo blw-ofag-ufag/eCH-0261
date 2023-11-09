@@ -14,3 +14,7 @@
 .project
 .classpath
 .settings/
+/test-results/*
+!/test-results/README.md
+
+
