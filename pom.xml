@@ -1,9 +1,99 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>ech.ch</groupId>
     <artifactId>0261</artifactId>
     <version>1.0-SNAPSHOT</version>
+
+    <properties>
+        <!--        <src.dir>src/main/xml</src.dir>-->
+    </properties>
+
+<!--    <dependencies>-->
+<!--        <dependency>-->
+<!--            <groupId>name.dmaus.schxslt</groupId>-->
+<!--            <artifactId>schxslt</artifactId>-->
+<!--            <version>1.9.5</version>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>com.foo</groupId>-->
+<!--            <artifactId>test</artifactId>-->
+<!--            <version>0.1.1</version>-->
+<!--        </dependency>-->
+
+<!--    </dependencies>-->
+
+    <repositories>
+        <repository>
+            <id>central</id>
+            <name>Central Repository</name>
+            <url>https://repo.maven.apache.org/maven2</url>
+            <layout>default</layout>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+<!--        <repository>-->
+<!--            <id>data-local</id>-->
+<!--            <name>data</name>-->
+<!--            <url>file://${project.basedir}/repo</url>-->
+<!--        </repository>-->
+    </repositories>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-antrun-plugin</artifactId>
+                <version>3.1.0</version>
+                <executions>
+                    <execution>
+                        <id>xsdQualityGate</id>
+                        <phase>test</phase>
+                        <configuration>
+                            <target>
+                                <exec executable="./run.sh">
+<!--                                    <arg value="myFirst.sh" />-->
+<!--                                    <arg value="inputOne" />-->
+                                </exec>
+<!--                                <exec executable="/bin/bash">-->
+<!--                                    <arg value="src/mySecond.sh" />-->
+<!--                                    <arg value="inputTwo" />-->
+<!--                                </exec>-->
+                            </target>
+                        </configuration>
+                        <goals>
+                            <goal>run</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>3.1.0</version>
+                <configuration>
+                    <executable>java</executable>
+                    <mainClass>name.dmaus.schxslt.cli.Application</mainClass>
+                    <!-- optional -->
+                    <workingDirectory>${project.build.directory}/target/classes</workingDirectory>
+                    <arguments>
+                        <argument>-jar</argument>
+                        <argument>schxslt-cli.jar</argument>
+                        <argument>-d</argument>
+                        <argument>students.xsd</argument>
+                        <argument>-s</argument>
+                        <argument>students.sch</argument>
+                        <argument>-o</argument>
+                        <argument>results.xml</argument>
+                    </arguments>
+                </configuration>
+            </plugin>
+
+        </plugins>
+    </build>
 
 </project>
 
