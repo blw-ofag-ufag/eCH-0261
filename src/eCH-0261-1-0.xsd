@@ -24,100 +24,11 @@ Datum				Version				Autor
 			<xs:documentation xml:lang="en">Legal Unit</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="uid" type="eCH-0108:uidType">
+			<xs:element name="legalUnitMasterData" type="eCH-0108:legalUnitMasterDataType">
 				<xs:annotation>
-					<xs:documentation xml:lang="de">UID. Siehe den referenzierten Standard.</xs:documentation>
-					<xs:documentation xml:lang="fr">Voir standard référencé.</xs:documentation>
-					<xs:documentation xml:lang="en">Unique Id of the legal Unit. See the referenced standard.
-                    </xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="name" type="eCH-0108:unitNameType">
-				<xs:annotation>
-					<xs:documentation xml:lang="de">Name. Siehe den referenzierten Standard.</xs:documentation>
-					<xs:documentation xml:lang="fr">Voir standard référencé.</xs:documentation>
-					<xs:documentation xml:lang="en">See the referenced standard.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="additionalName" type="eCH-0108:unitNameType" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation xml:lang="de">Zusatzname. Siehe den referenzierten Standard.</xs:documentation>
-					<xs:documentation xml:lang="fr">Voir standard référencé.</xs:documentation>
-					<xs:documentation xml:lang="en">See the referenced standard.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="translatedName" type="eCH-0108:unitNameType" minOccurs="0" maxOccurs="unbounded">
-				<xs:annotation>
-					<xs:documentation xml:lang="de">Übersetzungen des Namens. Siehe den referenzierten Standard.
-                    </xs:documentation>
-					<xs:documentation xml:lang="fr">Voir standard référencé.</xs:documentation>
-					<xs:documentation xml:lang="en">See the referenced standard.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="mainAddress" type="eCH-0108:mainAddressType">
-				<xs:annotation>
-					<xs:documentation xml:lang="de">Hauptadresse. Siehe den referenzierten Standard.</xs:documentation>
-					<xs:documentation xml:lang="fr">Voir standard référencé.</xs:documentation>
-					<xs:documentation xml:lang="en">Main address). See the referenced standard.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="additionalLocationAddress" type="eCH-0108:additionalLocationAddressType" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation xml:lang="de">Zusätzliche lokale Adresse. Siehe den referenzierten Standard.
-                    </xs:documentation>
-					<xs:documentation xml:lang="fr">Voir standard référencé.</xs:documentation>
-					<xs:documentation xml:lang="en">Additional local address. See the referenced standard.
-                    </xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="additionalPostOfficeBoxAddress" type="eCH-0108:additionalPostOfficeBoxAddressType" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation xml:lang="de">Zusätzliche Postfach Adresse. Siehe den referenzierten Standard.</xs:documentation>
-					<xs:documentation xml:lang="fr">Voir standard référencé.</xs:documentation>
-					<xs:documentation xml:lang="en">Additional PO box address. See the referenced standard.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="legalForm" type="eCH-0108:legalFormType">
-				<xs:annotation>
-					<xs:documentation xml:lang="de">Rechtsform. Siehe den referenzierten Standard.</xs:documentation>
-					<xs:documentation xml:lang="fr">Voir standard référencé.</xs:documentation>
-					<xs:documentation xml:lang="en">See the referenced standard.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="mainUid" type="eCH-0108:uidType">
-				<xs:annotation>
-					<xs:documentation xml:lang="de">UID der rechtlichen Haupteinheit. Diese unterscheidet sich von der
-                        UID, falls es sich bei der rechtlichen Einheit um eine Zweigniederlassung handelt. Handelt es
-                        sich um die Haupteinheit selbst, ist die HauptUID identisch mit der UID
-                    </xs:documentation>
-					<xs:documentation xml:lang="en">
-                        UID of the main LegalUnit. If the UIDs do not match, then this instance refers to a branch. If
-                        the UIDs match, then an instance refers to a main LegalUnit.
-                    </xs:documentation>
-					<xs:documentation xml:lang="fr">IDE de l'unité légale principale. Celui-ci est différent de l'IDE
-                        lorsqu'il s'agit d'une succursale. S'il s'agit d'une unité légale principale, l'IDE et identique
-                        à l'IDE de l'unité légale principale.
-                    </xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="status" type="eCH-0261:legalUnitStatusType">
-				<xs:annotation>
-					<xs:documentation xml:lang="de">Status. Siehe den referenzierten Standard.</xs:documentation>
-					<xs:documentation xml:lang="fr">Voir standard référencé.</xs:documentation>
-					<xs:documentation xml:lang="en">See the referenced standard.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="statusDate" type="xs:date">
-				<xs:annotation>
-					<xs:documentation xml:lang="de">Das Anfangsdatum, ab dem eine auf dieser Definition basierende
-                        Instanz in Kraft tritt. Dies ermöglicht die Historisierung und Versionierung.
-                    </xs:documentation>
-					<xs:documentation/>
-					<xs:documentation xml:lang="fr">La date de début à partir de laquelle une instance basée sur cette
-                        définition entre en vigueur. Cela permet l'historisation et le versioning.
-                    </xs:documentation>
-					<xs:documentation xml:lang="en">The beginning date as of which an instance based on this definition
-                        enters into force. This enables an audit trail and versioning.
+					<xs:documentation xml:lang="de">Stammdaten der rechtlichen Einheit</xs:documentation>
+					<xs:documentation xml:lang="fr">Données de référence de l’unité légale</xs:documentation>
+					<xs:documentation xml:lang="en">Master data of the legal unit
                     </xs:documentation>
 				</xs:annotation>
 			</xs:element>
@@ -128,13 +39,6 @@ Datum				Version				Autor
                     </xs:documentation>
 					<xs:documentation xml:lang="en">Specific agricultural characteristics of the legal unit
                     </xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="validFromInclusive" type="xs:date" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation xml:lang="de">Gültig ab (inklusiv)</xs:documentation>
-					<xs:documentation xml:lang="fr">Valable à partir de (inclus)</xs:documentation>
-					<xs:documentation xml:lang="en">Valid from, inclusive</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
@@ -167,7 +71,7 @@ Datum				Version				Autor
 					<xs:documentation xml:lang="en">A list of person/personFunctions associated with this element.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="statusDate" type="xs:date" minOccurs="0">
+			<xs:element name="lastMutation" type="xs:dateTime" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="de">Datum, an dem die Gültigkeit beginnt. Ermöglicht Historisierung und
                         Versionierung.
@@ -188,86 +92,11 @@ Datum				Version				Autor
 			<xs:documentation xml:lang="en">Local Unit. See the referenced standard.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="localId" type="eCH-0108:localIdType">
+			<xs:element name="localUnitMasterData" type="eCH-0108:localUnitMasterDataType">
 				<xs:annotation>
-					<xs:documentation xml:lang="de">BUR-Nummer. Siehe den referenzierten Standard.</xs:documentation>
-					<xs:documentation xml:lang="fr">Voir standard référencé.</xs:documentation>
-					<xs:documentation xml:lang="en">A unique identifier of a local unit. See the referenced standard.
-                    </xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="legalUnitAffiliation" type="eCH-0108:uidType">
-				<xs:annotation>
-					<xs:documentation xml:lang="de">Zugehörigkeit zu einer rechtlichen Einheit: Verweis auf UID der
-                        rechtlichen Einheit
-                    </xs:documentation>
-					<xs:documentation xml:lang="fr">Voir standard référencé.</xs:documentation>
-					<xs:documentation xml:lang="en">Affiliation to a legal unit via its unique identifier. See the
-                        referenced standard.
-                    </xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="name" type="eCH-0108:unitNameType">
-				<xs:annotation>
-					<xs:documentation xml:lang="de">Name. Siehe den referenzierten Standard.</xs:documentation>
-					<xs:documentation xml:lang="fr">Voir standard référencé.</xs:documentation>
-					<xs:documentation xml:lang="en">Name. See the referenced standard.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="additionalName" type="eCH-0108:unitNameType" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation xml:lang="de">Zusatznamen. Siehe den referenzierten Standard.</xs:documentation>
-					<xs:documentation xml:lang="fr">Voir standard référencé.</xs:documentation>
-					<xs:documentation xml:lang="en">Additional name. See the referenced standard.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="mainAddress" type="eCH-0108:mainAddressType">
-				<xs:annotation>
-					<xs:documentation xml:lang="de">Hauptadresse. Siehe den referenzierten Standard.</xs:documentation>
-					<xs:documentation xml:lang="fr">Voir standard référencé.</xs:documentation>
-					<xs:documentation xml:lang="en">Main address). See the referenced standard.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="additionalLocationAddress" type="eCH-0108:additionalLocationAddressType" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation xml:lang="de">Zusätzliche lokale Adresse. Siehe den referenzierten Standard.                    </xs:documentation>
-					<xs:documentation xml:lang="fr">Voir standard référencé.</xs:documentation>
-					<xs:documentation xml:lang="en">Additional local address. See the referenced standard.                    </xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="additionalPostOfficeBoxAddress" type="eCH-0108:additionalPostOfficeBoxAddressType" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation xml:lang="de">Zusätzliche Postfach Adresse. Siehe den referenzierten Standard.</xs:documentation>
-					<xs:documentation xml:lang="fr">Voir standard référencé.</xs:documentation>
-					<xs:documentation xml:lang="en">Additional PO box address. See the referenced standard.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="nogaCode" type="eCH-0108:nogaCodeType" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation xml:lang="de">NOGA-Code. Siehe den referenzierten Standard.</xs:documentation>
-					<xs:documentation xml:lang="fr">NOGA-Code. Voir standard référencé.</xs:documentation>
-					<xs:documentation xml:lang="en">NOGA-Code. See the referenced standard.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="nogaVersion" type="eCH-0108:nogaVersionType" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation xml:lang="de">NOGA-Version. Zwingend, wenn ein NOGA-Code angegeben wird.</xs:documentation>
-					<xs:documentation xml:lang="fr">NOGA-Version.</xs:documentation>
-					<xs:documentation xml:lang="en">NOGA-Version.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="status" type="eCH-0261:localUnitStatusType">
-				<xs:annotation>
-					<xs:documentation xml:lang="de">Status</xs:documentation>
-					<xs:documentation xml:lang="fr">Statut</xs:documentation>
-					<xs:documentation xml:lang="en">Status</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="statusDate" type="xs:date">
-				<xs:annotation>
-					<xs:documentation xml:lang="de">Das Anfangsdatum, ab dem eine auf dieser Definition basierende Instanz in Kraft tritt. Dies ermöglicht die Historisierung und Versionierung.</xs:documentation>
-					<xs:documentation xml:lang="fr">La date de début à partir de laquelle une instance basée sur cette définition entre en vigueur. Cela permet l'historisation et le versioning.</xs:documentation>
-					<xs:documentation xml:lang="en">The beginning date as of which an instance based on this definition enters into force. This enables an audit trail and versioning.
+					<xs:documentation xml:lang="de">Stammdaten der örtlichen Einheit</xs:documentation>
+					<xs:documentation xml:lang="fr">Données de référence de l’unité locale</xs:documentation>
+					<xs:documentation xml:lang="en">Master data of the local unit
                     </xs:documentation>
 				</xs:annotation>
 			</xs:element>
