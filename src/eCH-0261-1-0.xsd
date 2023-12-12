@@ -28,17 +28,14 @@ Datum				Version				Autor
 				<xs:annotation>
 					<xs:documentation xml:lang="de">Stammdaten der rechtlichen Einheit</xs:documentation>
 					<xs:documentation xml:lang="fr">Données de référence de l’unité légale</xs:documentation>
-					<xs:documentation xml:lang="en">Master data of the legal unit
-                    </xs:documentation>
+					<xs:documentation xml:lang="en">Master data of the legal unit</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="agriculturalAdditionToLegalUnit" type="eCH-0261:agriculturalAdditionToLegalUnitType">
 				<xs:annotation>
 					<xs:documentation xml:lang="de">Agrarspezifische Merkmale der rechtlichen Einheit</xs:documentation>
-					<xs:documentation xml:lang="fr">Caractéristiques spécifiques agricoles de l'unité légale
-                    </xs:documentation>
-					<xs:documentation xml:lang="en">Specific agricultural characteristics of the legal unit
-                    </xs:documentation>
+					<xs:documentation xml:lang="fr">Caractéristiques spécifiques agricoles de l'unité légale</xs:documentation>
+					<xs:documentation xml:lang="en">Specific agricultural characteristics of the legal unit</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
@@ -52,16 +49,9 @@ Datum				Version				Autor
 		<xs:sequence>
 			<xs:element name="parentLegalUnit" type="eCH-0108:uidType" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation xml:lang="de">Übergeordnete rechtliche Einheit. Es ist möglich, dass es mehrere
-                        übergeordnete rechtliche Einheiten gibt. Dies kann z.B. bei Betriebszweiggemeinschaften und
-                        ÖLN-Gemeinschaft der Fall sein.
-                    </xs:documentation>
-					<xs:documentation xml:lang="fr">Unité légale parente. Il peut y avoir plusieursunités légales
-                        parentes (communauté partielle d'exploitation et communauté PER).
-                    </xs:documentation>
-					<xs:documentation xml:lang="en">Parent legal unit. There can be more than one parent legal unit,
-                        e.g. as is the case with group farming branches and REP-communities.
-                    </xs:documentation>
+					<xs:documentation xml:lang="de">Übergeordnete rechtliche Einheit. Es ist möglich, dass es mehrere übergeordnete rechtliche Einheiten gibt. Dies kann z.B. bei Betriebszweiggemeinschaften und ÖLN-Gemeinschaft der Fall sein.</xs:documentation>
+					<xs:documentation xml:lang="fr">Unité légale parente. Il peut y avoir plusieursunités légales parentes (communauté partielle d'exploitation et communauté PER).</xs:documentation>
+					<xs:documentation xml:lang="en">Parent legal unit. There can be more than one parent legal unit, e.g. as is the case with group farming branches and REP-communities.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="personWithFunction" type="eCH-0261:personWithFunctionType" minOccurs="0" maxOccurs="unbounded">
@@ -73,14 +63,9 @@ Datum				Version				Autor
 			</xs:element>
 			<xs:element name="lastMutation" type="xs:dateTime" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="de">Datum, an dem die Gültigkeit beginnt. Ermöglicht Historisierung und
-                        Versionierung.
-                    </xs:documentation>
-					<xs:documentation xml:lang="fr">Date de début de validité. Permet l'historisation et le versionage
-                    </xs:documentation>
-					<xs:documentation xml:lang="en">Beginning date of validity, inclusive. This enables an audit trail
-                        and versioning.
-                    </xs:documentation>
+					<xs:documentation xml:lang="de">Datum, an dem die Gültigkeit beginnt. Ermöglicht Historisierung und Versionierung.</xs:documentation>
+					<xs:documentation xml:lang="fr">Date de début de validité. Permet l'historisation et le versionage.</xs:documentation>
+					<xs:documentation xml:lang="en">Beginning date of validity, inclusive. This enables an audit trail and versioning.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
@@ -96,26 +81,23 @@ Datum				Version				Autor
 				<xs:annotation>
 					<xs:documentation xml:lang="de">Stammdaten der örtlichen Einheit</xs:documentation>
 					<xs:documentation xml:lang="fr">Données de référence de l’unité locale</xs:documentation>
-					<xs:documentation xml:lang="en">Master data of the local unit
-                    </xs:documentation>
+					<xs:documentation xml:lang="en">Master data of the local unit</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="agriculturalAdditionToLocalUnit" type="eCH-0261:agriculturalAdditionToLocalUnitType">
 				<xs:annotation>
-					<xs:documentation xml:lang="de">Agrarspezifische Ergänzung der örtlichen Einheit</xs:documentation>
-					<xs:documentation xml:lang="fr">Caractéristiques spécifiques agricoles de l'unité locale.
-                    </xs:documentation>
-					<xs:documentation xml:lang="en">Specific agricultural characteristics of the local unit
-                    </xs:documentation>
+					<xs:documentation xml:lang="de">Agrarspezifische Ergänzung der örtlichen Einheit.</xs:documentation>
+					<xs:documentation xml:lang="fr">Caractéristiques spécifiques agricoles de l'unité locale.</xs:documentation>
+					<xs:documentation xml:lang="en">Specific agricultural characteristics of the local unit.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="agriculturalAdditionToLocalUnitType">
 		<xs:annotation>
-			<xs:documentation xml:lang="de">Agrarspezifische Merkmale der örtlichen Einheit</xs:documentation>
+			<xs:documentation xml:lang="de">Agrarspezifische Merkmale der örtlichen Einheit.</xs:documentation>
 			<xs:documentation xml:lang="fr">Caractéristiques spécifiques agricoles de l'unité locale.</xs:documentation>
-			<xs:documentation xml:lang="en">Specific agricultural characteristics of the local unit</xs:documentation>
+			<xs:documentation xml:lang="en">Specific agricultural characteristics of the local unit.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="parentLocalId" type="eCH-0108:localIdType" minOccurs="0" maxOccurs="unbounded">
@@ -134,35 +116,23 @@ Datum				Version				Autor
 			</xs:element>
 			<xs:element name="inspectionOrganisation" type="eCH-0108:uidType" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="de">Unternehmen, das für die Kontrollen verantwortlich ist
-                    </xs:documentation>
+					<xs:documentation xml:lang="de">Unternehmen, das für die Kontrollen verantwortlich ist</xs:documentation>
 					<xs:documentation xml:lang="fr">Entreprise responsable des contrôles</xs:documentation>
 					<xs:documentation xml:lang="en">Enterprise responsible for inspection</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="nprCertified" type="xs:boolean" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="de">NPR-Zulassung (Zertifizierung auf der Grundlage des Programms zur
-                        Reduzierung von Stickstoff und Phosphor)
-                    </xs:documentation>
-					<xs:documentation xml:lang="fr">Certification basée sur le programme de réduction de l'azote et des
-                        phosphores
-                    </xs:documentation>
-					<xs:documentation xml:lang="en">Certification based on the nitrogen and phosporous reduction
-                        programme.
-                    </xs:documentation>
+					<xs:documentation xml:lang="de">NPR-Zulassung (Zertifizierung auf der Grundlage des Programms zur Reduzierung von Stickstoff und Phosphor).</xs:documentation>
+					<xs:documentation xml:lang="fr">Certification basée sur le programme de réduction de l'azote et des phosphores.</xs:documentation>
+					<xs:documentation xml:lang="en">Certification based on the nitrogen and phosporous reduction programme.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="agriculturalZone" type="eCH-0261:agriculturalZoneType" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="de">Landwirtschaftliche Zone der örtlichen Einheit. Gewichteter
-                        Durchschnitt der landwirtschaftlichen Zonen der verschiedenen Kulturen.
-                    </xs:documentation>
-					<xs:documentation xml:lang="fr">Zone agricole de l'unité locale. Moyenne pondérée de la zone
-                        agricole des différentes cultures.
-                    </xs:documentation>
-					<xs:documentation xml:lang="en">Weighted average of the agricultural area of the different crops.
-                    </xs:documentation>
+					<xs:documentation xml:lang="de">Landwirtschaftliche Zone der örtlichen Einheit. Gewichteter Durchschnitt der landwirtschaftlichen Zonen der verschiedenen Kulturen.</xs:documentation>
+					<xs:documentation xml:lang="fr">Zone agricole de l'unité locale. Moyenne pondérée de la zone agricole des différentes cultures.</xs:documentation>
+					<xs:documentation xml:lang="en">Weighted average of the agricultural area of the different crops.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="agriculturalOversightAuthority" type="eCH-0261:agriculturalOversightAuthorityType" minOccurs="0">
@@ -190,18 +160,9 @@ Datum				Version				Autor
 	</xs:complexType>
 	<xs:complexType name="agriculturalOversightAuthorityType">
 		<xs:annotation>
-			<xs:documentation xml:lang="de">Kanton oder Land (im Falle Liechtenstein), der/das für diese
-				örtliche Einheit für Agrarthemen zuständig ist. Dies kann vom Standortkanton der örtlichen
-				Einheit abweichen.
-			</xs:documentation>
-			<xs:documentation xml:lang="fr">Canton ou pays (dans le cas du Liechtenstein) responsable de cette
-				unité locale pour les questions agricoles. Celui-ci peut être différent du canton de
-				localisation de l'unité locale.
-			</xs:documentation>
-			<xs:documentation xml:lang="en">Canton or country (in the case of Liechtenstein) with oversight
-				responsibility for agricultural concerns for this local unit. May differ from the canton where
-				the local unit is located.
-			</xs:documentation>
+			<xs:documentation xml:lang="de">Kanton oder Land (im Falle Liechtenstein), der/das für diese örtliche Einheit für Agrarthemen zuständig ist. Dies kann vom Standortkanton der örtlichen Einheit abweichen.</xs:documentation>
+			<xs:documentation xml:lang="fr">Canton ou pays (dans le cas du Liechtenstein) responsable de cette unité locale pour les questions agricoles. Celui-ci peut être différent du canton de localisation de l'unité locale.</xs:documentation>
+			<xs:documentation xml:lang="en">Canton or country (in the case of Liechtenstein) with oversight responsibility for agricultural concerns for this local unit. May differ from the canton where the local unit is located.</xs:documentation>
 		</xs:annotation>
 		<xs:choice>
 			<xs:element name="cantonalAuthority" type="eCH-0007:cantonAbbreviationType"/>
@@ -320,9 +281,7 @@ Datum				Version				Autor
 				<xs:annotation>
 					<xs:documentation xml:lang="de">Gültig ab (inklusiv)</xs:documentation>
 					<xs:documentation xml:lang="fr">Valable à partir de (inclus)</xs:documentation>
-					<xs:documentation xml:lang="en">Beginning date of validity, inclusive. This enables an audit trail
-                        and versioning.
-                    </xs:documentation>
+					<xs:documentation xml:lang="en">Beginning date of validity, inclusive. This enables an audit trail and versioning.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
@@ -331,10 +290,7 @@ Datum				Version				Autor
 		<xs:annotation>
 			<xs:documentation xml:lang="de">Person mit Funktion</xs:documentation>
 			<xs:documentation xml:lang="de">Personne avec rôle associé</xs:documentation>
-			<xs:documentation xml:lang="en">A person mapped to a role. The relationship of a person to a PersonFunction.
-                This is useful for communications in which assignments are provided by or shared with systems other than
-                one's own.
-            </xs:documentation>
+			<xs:documentation xml:lang="en">A person mapped to a role. The relationship of a person to a PersonFunction. This is useful for communications in which assignments are provided by or shared with systems other than one's own.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="personIdentifier" type="eCH-0261:personIdentifierType" minOccurs="1">
@@ -374,23 +330,16 @@ Datum				Version				Autor
 			</xs:element>
 			<xs:element name="descriptor" type="eCH-0261:descriptorType" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="de">Beschreibung der Funktion</xs:documentation>
-					<xs:documentation xml:lang="fr">Description de la rôle</xs:documentation>
-					<xs:documentation xml:lang="en">Description of the role. See the referenced standard.
-                    </xs:documentation>
+					<xs:documentation xml:lang="de">Beschreibung der Funktion.</xs:documentation>
+					<xs:documentation xml:lang="fr">Description de la rôle.</xs:documentation>
+					<xs:documentation xml:lang="en">Description of the role. See the referenced standard.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="freeformDesignation" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="de">Freitext Bezeichnung (falls ein Code vom Typ "Andere" gewählt
-                        wurde)
-                    </xs:documentation>
-					<xs:documentation xml:lang="fr">Désignation en texte libre (si un code de type "Autre" a été choisi)
-                        a été utilisé)
-                    </xs:documentation>
-					<xs:documentation xml:lang="en">A freeform designation for usage should a pre-defined entry not
-                        prove suitable. Use sparingly and only when using the code "Other".
-                    </xs:documentation>
+					<xs:documentation xml:lang="de">Freitext Bezeichnung (falls ein Code vom Typ "Andere" gewählt wurde).</xs:documentation>
+					<xs:documentation xml:lang="fr">Désignation en texte libre (si un code de type "Autre" a été choisi) a été utilisé).</xs:documentation>
+					<xs:documentation xml:lang="en">A freeform designation for usage should a pre-defined entry not prove suitable. Use sparingly and only when using the code "Other".</xs:documentation>
 				</xs:annotation>
 				<xs:simpleType>
 					<xs:restriction base="xs:token">
@@ -405,11 +354,7 @@ Datum				Version				Autor
 		<xs:annotation>
 			<xs:documentation xml:lang="de">Ein weltweit eindeutiger Identifikator. Durch Angabe eines Systems oder einer Behörde kann die Eindeutigkeit der Kennung festgestellt werden. Je nach dem Kontext der Verwendung dieser Kennung kann es sich um einen Primär- oder Ersatzschlüssel in einem beliebigen System handeln. Verbrauchende Elemente können auf dieses Element mit einer Kardinalität größer als 1 verweisen, so dass eine Zuordnung zwischen technischen Speicher- und Herkunftssystemen oder Aufzeichnungssystemen möglich ist.</xs:documentation>
 			<xs:documentation xml:lang="fr">Un identifiant unique au niveau mondial. L'unicité de l'identifiant peut être établie par l'indication d'un système ou d'une autorité. Selon le contexte de l'utilisation de cet identifiant, il peut s'agir d'une clé primaire ou de substitution dans n'importe quel système. Les éléments consommateurs peuvent se référer à cet élément avec une cardinalité supérieure à 1, ce qui permet d'établir une correspondance entre le stockage technique et les systèmes ou systèmes d'enregistrement d'origine.</xs:documentation>
-			<xs:documentation xml:lang="en">A globally unique identifier. Via indication of a system or authority, the
-                uniqueness of the id can be established. Depending on the context of the usage of this id, this can be a
-                primary or surrogate key in any system. Mapping of identifiers is not part of the specification but can
-                be provided by systems.
-            </xs:documentation>
+			<xs:documentation xml:lang="en">A globally unique identifier. Via indication of a system or authority, the uniqueness of the id can be established. Depending on the context of the usage of this id, this can be a primary or surrogate key in any system. Mapping of identifiers is not part of the specification but can be provided by systems.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="id">
@@ -509,8 +454,7 @@ Datum				Version				Autor
 				<xs:annotation>
 					<xs:documentation xml:lang="de">Beschreibung der Bezeichnung</xs:documentation>
 					<xs:documentation xml:lang="fr">Explication de cette description</xs:documentation>
-					<xs:documentation xml:lang="en">The explanation of this descriptor, i. e. its usage.
-                    </xs:documentation>
+					<xs:documentation xml:lang="en">The explanation of this descriptor, i. e. its usage</xs:documentation>
 				</xs:annotation>
 				<xs:simpleType>
 					<xs:restriction base="xs:token">
@@ -523,10 +467,7 @@ Datum				Version				Autor
 	<xs:simpleType name="unitType">
 		<xs:annotation>
 			<xs:documentation xml:lang="de">Einheit</xs:documentation>
-			<xs:documentation xml:lang="en">The unit used. This is a limited subset derived from but not limited to SI.
-                For simplicity, units composed of other units (ratios) are contained within this definition. For those
-                cases in which a unit is not applicable but nevertheless required, an "n/a" entry is provided.
-            </xs:documentation>
+			<xs:documentation xml:lang="en">The unit used. This is a limited subset derived from but not limited to SI. For simplicity, units composed of other units (ratios) are contained within this definition. For those cases in which a unit is not applicable but nevertheless required, an "n/a" entry is provided.</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:token">
 			<xs:enumeration value="kg">
@@ -614,9 +555,7 @@ Datum				Version				Autor
 					<xs:documentation xml:lang="de">Nicht zutreffend</xs:documentation>
 					<xs:documentation xml:lang="fr">n'est pas applicable</xs:documentation>
 					<xs:documentation xml:lang="it">non applicabile</xs:documentation>
-					<xs:documentation xml:lang="en">Not applicable. Not all values have an associated unit but some
-                        elements declare unit as required. Use this for those cases.
-                    </xs:documentation>
+					<xs:documentation xml:lang="en">Not applicable. Not all values have an associated unit but some elements declare unit as required. Use this for those cases.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="m2">
@@ -657,19 +596,14 @@ Datum				Version				Autor
 		<xs:annotation>
 			<xs:documentation xml:lang="de">Dieses Element ist für Listen beabsichtigt, die Identifikatoren und Deskriptoren beinhalten. Solche Listen können statischer oder dynamischer Natur sein.</xs:documentation>
 			<xs:documentation xml:lang="fr">Cet élément est destiné aux listes contenant des identifiants et des descriptions. Ces listes peuvent être statiques ou dynamiques.</xs:documentation>
-			<xs:documentation xml:lang="en">This element is useful for lists that encompass ids and descriptors only,
-                and which are potentially duration-based. Such lists can either be static or dynamic in nature.
-            </xs:documentation>
+			<xs:documentation xml:lang="en">This element is useful for lists that encompass ids and descriptors only, and which are potentially duration-based. Such lists can either be static or dynamic in nature.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="code">
 				<xs:annotation>
-					<xs:documentation xml:lang="de">Code (dieser muss nur innerhalb der Liste einddeutig sein).
-                    </xs:documentation>
-					<xs:documentation xml:lang="fr">Code (celui-ci doit être univoque uniquement à l'intérieur de la liste).
-                    </xs:documentation>
-					<xs:documentation xml:lang="en">An identifier. This must be unique within this list only.
-                    </xs:documentation>
+					<xs:documentation xml:lang="de">Code (dieser muss nur innerhalb der Liste einddeutig sein).</xs:documentation>
+					<xs:documentation xml:lang="fr">Code (celui-ci doit être univoque uniquement à l'intérieur de la liste).</xs:documentation>
+					<xs:documentation xml:lang="en">An identifier. This must be unique within this list only.</xs:documentation>
 				</xs:annotation>
 				<xs:simpleType>
 					<xs:restriction base="xs:token">
@@ -693,11 +627,7 @@ Datum				Version				Autor
 			</xs:element>
 			<xs:element name="validToInclusive" type="xs:date" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="de">Enddatum der Gültigkeit. Ermöglicht das Ausserkraftsetzen eines
-                        Eintrags. Falls ein Eintrag aus dem Verkehr genommen werden soll oder falls eine Mutation
-                        vorgenommen wurde, kann er mit dem Datum, bis zu welchem er gültig war, versehen werden. Die
-                        Liste bleibt so rückwärtskompatibel.
-                    </xs:documentation>
+					<xs:documentation xml:lang="de">Enddatum der Gültigkeit. Ermöglicht das Ausserkraftsetzen eines Eintrags. Falls ein Eintrag aus dem Verkehr genommen werden soll oder falls eine Mutation vorgenommen wurde, kann er mit dem Datum, bis zu welchem er gültig war, versehen werden. Die Liste bleibt so rückwärtskompatibel.</xs:documentation>
 					<xs:documentation xml:lang="fr">La date de fin de cette définition, inclusivement. Cela permet à une définition d'être retirée de la circulation active sans affecter l'usage précédent.</xs:documentation>
 					<xs:documentation xml:lang="en">The end date of this definition, inclusive. This allows a definition to be removed from active circulation without affecting previous usage.</xs:documentation>
 				</xs:annotation>
@@ -764,17 +694,9 @@ Datum				Version				Autor
 	</xs:simpleType>
 	<xs:simpleType name="farmTypeType">
 		<xs:annotation>
-			<xs:documentation xml:lang="de">Die Kantone erkennen die landwirtschaftlichen Betriebe unter
-                Berücksichtigung der in der Verordnung über landwirtschaftliche Begriffe und die Anerkennung von
-                Betriebsformen festgelegten Kriterien an.
-            </xs:documentation>
-			<xs:documentation xml:lang="fr">Les cantons reconnaissent les exploitations agricoles en tenant compte des
-                critères définis dans l'ordonnance sur la terminologie agricole et la reconnaissance des formes
-                d'exploitation.
-            </xs:documentation>
-			<xs:documentation xml:lang="en">The cantons recognise agricultural holdings in accordance with the criteria
-                defined in the Ordinance on Agricultural Terminology and the recognition of farm types
-            </xs:documentation>
+			<xs:documentation xml:lang="de">Die Kantone erkennen die landwirtschaftlichen Betriebe unter Berücksichtigung der in der Verordnung über landwirtschaftliche Begriffe und die Anerkennung von Betriebsformen festgelegten Kriterien an.</xs:documentation>
+			<xs:documentation xml:lang="fr">Les cantons reconnaissent les exploitations agricoles en tenant compte des critères définis dans l'ordonnance sur la terminologie agricole et la reconnaissance des formes d'exploitation.</xs:documentation>
+			<xs:documentation xml:lang="en">The cantons recognise agricultural holdings in accordance with the criteria defined in the Ordinance on Agricultural Terminology and the recognition of farm types.</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:int">
 			<xs:enumeration value="01">
@@ -909,15 +831,9 @@ Datum				Version				Autor
 	</xs:simpleType>
 	<xs:simpleType name="agriculturalZoneType">
 		<xs:annotation>
-			<xs:documentation xml:lang="de">Durch die Unterteilung der landwirtschaftlichen Flächen in Zonen können die
-                schwierigen Produktionsbedingungen berücksichtigt werden.
-            </xs:documentation>
-			<xs:documentation xml:lang="fr">La subdivision des surfaces agricoles en zones permet de prendre en compte
-                la difficulté des conditions de production.
-            </xs:documentation>
-			<xs:documentation xml:lang="en">A subdivision of agricultural areas into zones reflecting production
-                conditions based on arduousness.
-            </xs:documentation>
+			<xs:documentation xml:lang="de">Durch die Unterteilung der landwirtschaftlichen Flächen in Zonen können die schwierigen Produktionsbedingungen berücksichtigt werden.</xs:documentation>
+			<xs:documentation xml:lang="fr">La subdivision des surfaces agricoles en zones permet de prendre en compte la difficulté des conditions de production.</xs:documentation>
+			<xs:documentation xml:lang="en">A subdivision of agricultural areas into zones reflecting production conditions based on arduousness.</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:int">
 			<xs:enumeration value="31">
