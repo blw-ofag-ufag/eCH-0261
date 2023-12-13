@@ -9,13 +9,14 @@ Primarily, this repo contains:
 
 The UML diagrams are typically folded into supporting documentation and are not published by eCH individually.
 
-Such supporting documentation, e.g., documents in Office/PDF formats, is not maintained here.
-
 ## Branching and Tagging Conventions and Practices
 The following expresses the conventions used for tagging and branching.
 
 ### Tags
-Every released standard as well as a version that is under consultation is tagged. The tagged version number will match the published version on the respective eCH website. Released and consultation versions are published on eCH and on BLW/OFAG/UFAG websites with supporting documentation.
+Every released standard as well as a version that is under consultation is tagged.
+The tagged version number will match the published version on the respective eCH website.
+Released and consultation versions are published on eCH and on BLW/OFAG/UFAG websites with supporting documentation.
+Such supporting documentation, e.g., documents in Office/PDF formats, is not maintained here.
 
 #### Tag prefixes
 
