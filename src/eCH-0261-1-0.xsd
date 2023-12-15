@@ -544,7 +544,7 @@ Datum				Version				Autor
 			</xs:enumeration>
 			<xs:enumeration value="kg/pc">
 				<xs:annotation>
-					<xs:documentation xml:lang="de">KiloGramm/Stück</xs:documentation>
+					<xs:documentation xml:lang="de">Kilogramm/Stück</xs:documentation>
 					<xs:documentation xml:lang="fr">kilogramme/pièce</xs:documentation>
 					<xs:documentation xml:lang="it">chilogrammo/litro</xs:documentation>
 					<xs:documentation xml:lang="en">kilogram/litre</xs:documentation>
