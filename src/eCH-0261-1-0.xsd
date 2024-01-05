@@ -474,7 +474,7 @@ Datum				Version				Autor
 				<xs:annotation>
 					<xs:documentation xml:lang="de">Kilogramm</xs:documentation>
 					<xs:documentation xml:lang="fr">kilogramme</xs:documentation>
-					<xs:documentation xml:lang="it">kilogrammo</xs:documentation>
+					<xs:documentation xml:lang="it">chilogrammo</xs:documentation>
 					<xs:documentation xml:lang="en">kilogram</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
@@ -529,8 +529,8 @@ Datum				Version				Autor
 			<xs:enumeration value="%">
 				<xs:annotation>
 					<xs:documentation xml:lang="de">Prozent</xs:documentation>
-					<xs:documentation xml:lang="fr">pour cent</xs:documentation>
-					<xs:documentation xml:lang="it">per cento</xs:documentation>
+					<xs:documentation xml:lang="fr">pourcent</xs:documentation>
+					<xs:documentation xml:lang="it">percento</xs:documentation>
 					<xs:documentation xml:lang="en">percent</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
@@ -538,15 +538,15 @@ Datum				Version				Autor
 				<xs:annotation>
 					<xs:documentation xml:lang="de">Kilogramm/Kubikmeter</xs:documentation>
 					<xs:documentation xml:lang="fr">kilogramme/mètre cube</xs:documentation>
-					<xs:documentation xml:lang="it">kilogrammo/metro cubo</xs:documentation>
+					<xs:documentation xml:lang="it">chilogrammo/metro cubo</xs:documentation>
 					<xs:documentation xml:lang="en">kilogram/cubic metre</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="kg/pc">
 				<xs:annotation>
-					<xs:documentation xml:lang="de">KiloGramm/Stück</xs:documentation>
+					<xs:documentation xml:lang="de">Kilogramm/Stück</xs:documentation>
 					<xs:documentation xml:lang="fr">kilogramme/pièce</xs:documentation>
-					<xs:documentation xml:lang="it">kilogrammo/litro</xs:documentation>
+					<xs:documentation xml:lang="it">chilogrammo/litro</xs:documentation>
 					<xs:documentation xml:lang="en">kilogram/litre</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
@@ -568,25 +568,25 @@ Datum				Version				Autor
 			</xs:enumeration>
 			<xs:enumeration value="kg/m2">
 				<xs:annotation>
-					<xs:documentation xml:lang="de">Gramm/Quadratmeter</xs:documentation>
-					<xs:documentation xml:lang="fr">gramme/mètres carrés</xs:documentation>
-					<xs:documentation xml:lang="it">grammo/metri quadrati</xs:documentation>
-					<xs:documentation xml:lang="en">gram/square metre</xs:documentation>
+					<xs:documentation xml:lang="de">Kilogramm/Quadratmeter</xs:documentation>
+					<xs:documentation xml:lang="fr">kilogramme/mètre carré</xs:documentation>
+					<xs:documentation xml:lang="it">chilogrammo/metro quadrato</xs:documentation>
+					<xs:documentation xml:lang="en">kilogram/square metre</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="l/m2">
 				<xs:annotation>
 					<xs:documentation xml:lang="de">Liter/Quadratmeter</xs:documentation>
-					<xs:documentation xml:lang="fr">litre/mètres carrés</xs:documentation>
-					<xs:documentation xml:lang="it">litro/metri quadrati</xs:documentation>
+					<xs:documentation xml:lang="fr">litre/mètre carré</xs:documentation>
+					<xs:documentation xml:lang="it">litro/metro quadrato</xs:documentation>
 					<xs:documentation xml:lang="en">litre/square metre</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="pc/m2">
 				<xs:annotation>
 					<xs:documentation xml:lang="de">Stück/Quadratmeter</xs:documentation>
-					<xs:documentation xml:lang="fr">pièce/mètres carrés</xs:documentation>
-					<xs:documentation xml:lang="it">pezzo/metri quadrati</xs:documentation>
+					<xs:documentation xml:lang="fr">pièce/mètre carré</xs:documentation>
+					<xs:documentation xml:lang="it">pezzo/metro quadrato</xs:documentation>
 					<xs:documentation xml:lang="en">piece/square metre</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
