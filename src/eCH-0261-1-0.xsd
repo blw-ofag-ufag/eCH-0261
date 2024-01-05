@@ -518,12 +518,12 @@ Datum				Version				Autor
 					<xs:documentation xml:lang="en">gamma</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="µS">
+			<xs:enumeration value="S">
 				<xs:annotation>
-					<xs:documentation xml:lang="de">Mikro-Siemens</xs:documentation>
-					<xs:documentation xml:lang="fr">micro siemens</xs:documentation>
-					<xs:documentation xml:lang="it">micro siemens</xs:documentation>
-					<xs:documentation xml:lang="en">micro siemens</xs:documentation>
+					<xs:documentation xml:lang="de">Siemens</xs:documentation>
+					<xs:documentation xml:lang="fr">siemens</xs:documentation>
+					<xs:documentation xml:lang="it">siemens</xs:documentation>
+					<xs:documentation xml:lang="en">siemens</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="%">
@@ -544,7 +544,7 @@ Datum				Version				Autor
 			</xs:enumeration>
 			<xs:enumeration value="kg/pc">
 				<xs:annotation>
-					<xs:documentation xml:lang="de">KiloGramm/Stück</xs:documentation>
+					<xs:documentation xml:lang="de">Kilogramm/Stück</xs:documentation>
 					<xs:documentation xml:lang="fr">kilogramme/pièce</xs:documentation>
 					<xs:documentation xml:lang="it">kilogrammo/litro</xs:documentation>
 					<xs:documentation xml:lang="en">kilogram/litre</xs:documentation>
@@ -556,6 +556,14 @@ Datum				Version				Autor
 					<xs:documentation xml:lang="fr">n'est pas applicable</xs:documentation>
 					<xs:documentation xml:lang="it">non applicabile</xs:documentation>
 					<xs:documentation xml:lang="en">Not applicable. Not all values have an associated unit but some elements declare unit as required. Use this for those cases.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="m">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Meter</xs:documentation>
+					<xs:documentation xml:lang="fr">mètre</xs:documentation>
+					<xs:documentation xml:lang="it">metri</xs:documentation>
+					<xs:documentation xml:lang="en">metre</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="m2">
@@ -574,7 +582,7 @@ Datum				Version				Autor
 					<xs:documentation xml:lang="en">gram/square metre</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="l/m2">
+			<xs:enumeration value="m3/m2">
 				<xs:annotation>
 					<xs:documentation xml:lang="de">Liter/Quadratmeter</xs:documentation>
 					<xs:documentation xml:lang="fr">litre/mètres carrés</xs:documentation>
@@ -588,6 +596,22 @@ Datum				Version				Autor
 					<xs:documentation xml:lang="fr">pièce/mètres carrés</xs:documentation>
 					<xs:documentation xml:lang="it">pezzo/metri quadrati</xs:documentation>
 					<xs:documentation xml:lang="en">piece/square metre</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="IU">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">internationale Einheit</xs:documentation>
+					<xs:documentation xml:lang="fr">unité internationale</xs:documentation>
+					<xs:documentation xml:lang="it">unità internazionale</xs:documentation>
+					<xs:documentation xml:lang="en">international unit</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="mol">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Mol</xs:documentation>
+					<xs:documentation xml:lang="fr">mole</xs:documentation>
+					<xs:documentation xml:lang="it">mole</xs:documentation>
+					<xs:documentation xml:lang="en">mole</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
