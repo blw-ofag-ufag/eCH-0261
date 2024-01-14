@@ -63,9 +63,9 @@ Datum				Version				Autor
 			</xs:element>
 			<xs:element name="lastMutation" type="xs:dateTime" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="de">Datum, an dem die Gültigkeit beginnt. Ermöglicht Historisierung und Versionierung.</xs:documentation>
-					<xs:documentation xml:lang="fr">Date de début de validité. Permet l'historisation et le versionage.</xs:documentation>
-					<xs:documentation xml:lang="en">Beginning date of validity, inclusive. This enables an audit trail and versioning.</xs:documentation>
+					<xs:documentation xml:lang="de">Zeitpunkt, an dem die Gültigkeit beginnt. Ermöglicht Historisierung und Versionierung.</xs:documentation>
+					<xs:documentation xml:lang="fr">Date et heure de début de validité. Permet l'historisation et le versionage.</xs:documentation>
+					<xs:documentation xml:lang="en">Beginning date and time of validity, inclusive. This enables an audit trail and versioning.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
@@ -114,7 +114,7 @@ Datum				Version				Autor
 					<xs:documentation xml:lang="en">Form of agricultural development</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="inspectionOrganisation" type="eCH-0108:uidType" minOccurs="0">
+			<xs:element name="inspectionOrganisation" type="eCH-0108:uidType" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation xml:lang="de">Unternehmen, das für die Kontrollen verantwortlich ist</xs:documentation>
 					<xs:documentation xml:lang="fr">Entreprise responsable des contrôles</xs:documentation>
@@ -142,18 +142,18 @@ Datum				Version				Autor
 					<xs:documentation xml:lang="en">See the referenced type.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="personPersonFunction" type="eCH-0261:personWithFunctionType" minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="personWithFunction" type="eCH-0261:personWithFunctionType" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation xml:lang="de">Person/Function</xs:documentation>
 					<xs:documentation xml:lang="fr">Personne/Fonction</xs:documentation>
 					<xs:documentation xml:lang="en">Person/personFunction</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="validFromInclusive" type="xs:date" minOccurs="0">
+			<xs:element name="lastMutation" type="xs:dateTime" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="de">Gültig ab (inklusiv)</xs:documentation>
-					<xs:documentation xml:lang="fr">Valable à partir de (inclus)</xs:documentation>
-					<xs:documentation xml:lang="en">Valid From, inclusive. This enables an audit trail and versioning.</xs:documentation>
+					<xs:documentation xml:lang="de">Zeitpunkt, an dem die Gültigkeit beginnt. Ermöglicht Historisierung und Versionierung.</xs:documentation>
+					<xs:documentation xml:lang="fr">Date et heure de début de validité. Permet l'historisation et le versionage.</xs:documentation>
+					<xs:documentation xml:lang="en">Beginning date and time of validity, inclusive. This enables an audit trail and versioning.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
@@ -235,7 +235,7 @@ Datum				Version				Autor
 					<xs:documentation xml:lang="en">See the referenced standard.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="officialName" type="eCH-0010:lastNameType">
+			<xs:element name="lastName" type="eCH-0010:lastNameType">
 				<xs:annotation>
 					<xs:documentation xml:lang="de">Nachname. Siehe den referenzierten Standard</xs:documentation>
 					<xs:documentation xml:lang="fr">Voir standard référencé.</xs:documentation>
