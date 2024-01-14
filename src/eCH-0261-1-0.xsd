@@ -63,9 +63,9 @@ Datum				Version				Autor
 			</xs:element>
 			<xs:element name="lastMutation" type="xs:dateTime" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="de">Datum, an dem die Gültigkeit beginnt. Ermöglicht Historisierung und Versionierung.</xs:documentation>
-					<xs:documentation xml:lang="fr">Date de début de validité. Permet l'historisation et le versionage.</xs:documentation>
-					<xs:documentation xml:lang="en">Beginning date of validity, inclusive. This enables an audit trail and versioning.</xs:documentation>
+					<xs:documentation xml:lang="de">Zeitpunkt, an dem die Gültigkeit beginnt. Ermöglicht Historisierung und Versionierung.</xs:documentation>
+					<xs:documentation xml:lang="fr">Date et heure de début de validité. Permet l'historisation et le versionage.</xs:documentation>
+					<xs:documentation xml:lang="en">Beginning date and time of validity, inclusive. This enables an audit trail and versioning.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
@@ -114,7 +114,7 @@ Datum				Version				Autor
 					<xs:documentation xml:lang="en">Form of agricultural development</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="inspectionOrganisation" type="eCH-0108:uidType" minOccurs="0">
+			<xs:element name="inspectionOrganisation" type="eCH-0108:uidType" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation xml:lang="de">Unternehmen, das für die Kontrollen verantwortlich ist</xs:documentation>
 					<xs:documentation xml:lang="fr">Entreprise responsable des contrôles</xs:documentation>
@@ -142,18 +142,18 @@ Datum				Version				Autor
 					<xs:documentation xml:lang="en">See the referenced type.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="personPersonFunction" type="eCH-0261:personWithFunctionType" minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="personWithFunction" type="eCH-0261:personWithFunctionType" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation xml:lang="de">Person/Function</xs:documentation>
 					<xs:documentation xml:lang="fr">Personne/Fonction</xs:documentation>
 					<xs:documentation xml:lang="en">Person/personFunction</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="validFromInclusive" type="xs:date" minOccurs="0">
+			<xs:element name="lastMutation" type="xs:dateTime" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="de">Gültig ab (inklusiv)</xs:documentation>
-					<xs:documentation xml:lang="fr">Valable à partir de (inclus)</xs:documentation>
-					<xs:documentation xml:lang="en">Valid From, inclusive. This enables an audit trail and versioning.</xs:documentation>
+					<xs:documentation xml:lang="de">Zeitpunkt, an dem die Gültigkeit beginnt. Ermöglicht Historisierung und Versionierung.</xs:documentation>
+					<xs:documentation xml:lang="fr">Date et heure de début de validité. Permet l'historisation et le versionage.</xs:documentation>
+					<xs:documentation xml:lang="en">Beginning date and time of validity, inclusive. This enables an audit trail and versioning.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
@@ -235,7 +235,7 @@ Datum				Version				Autor
 					<xs:documentation xml:lang="en">See the referenced standard.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="officialName" type="eCH-0010:lastNameType">
+			<xs:element name="lastName" type="eCH-0010:lastNameType">
 				<xs:annotation>
 					<xs:documentation xml:lang="de">Nachname. Siehe den referenzierten Standard</xs:documentation>
 					<xs:documentation xml:lang="fr">Voir standard référencé.</xs:documentation>
@@ -838,74 +838,74 @@ Datum				Version				Autor
 		<xs:restriction base="xs:int">
 			<xs:enumeration value="31">
 				<xs:annotation>
-					<xs:documentation xml:lang="de">Ganzjahresbetrieb</xs:documentation>
-					<xs:documentation xml:lang="fr">Exploitation à l'année</xs:documentation>
-					<xs:documentation xml:lang="it">Azienda gestita tutto l'anno</xs:documentation>
-					<xs:documentation xml:lang="en">Farm all-the-year</xs:documentation>
+					<xs:documentation xml:lang="de">Talzone</xs:documentation>
+					<xs:documentation xml:lang="fr">Zone de plaine</xs:documentation>
+					<xs:documentation xml:lang="it">Zone di pianura</xs:documentation>
+					<xs:documentation xml:lang="en">Plains zone</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="41">
 				<xs:annotation>
-					<xs:documentation xml:lang="de">Produktionsstätte</xs:documentation>
-					<xs:documentation xml:lang="fr">Unité de production</xs:documentation>
-					<xs:documentation xml:lang="it">Unità di produzione</xs:documentation>
-					<xs:documentation xml:lang="en">Production facility</xs:documentation>
+					<xs:documentation xml:lang="de">Hügelzone</xs:documentation>
+					<xs:documentation xml:lang="fr">Zone des collines</xs:documentation>
+					<xs:documentation xml:lang="it">Zona collinare</xs:documentation>
+					<xs:documentation xml:lang="en">Hills zone</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="51">
 				<xs:annotation>
-					<xs:documentation xml:lang="de">Hirtenbetrieb</xs:documentation>
-					<xs:documentation xml:lang="fr">Exploitation de pâturage</xs:documentation>
-					<xs:documentation xml:lang="it">Azienda pastorizia</xs:documentation>
-					<xs:documentation xml:lang="en">Sheperd</xs:documentation>
+					<xs:documentation xml:lang="de">Bergzone 1</xs:documentation>
+					<xs:documentation xml:lang="fr">Zone de montagne 1</xs:documentation>
+					<xs:documentation xml:lang="it">Zona di montagna 1</xs:documentation>
+					<xs:documentation xml:lang="en">Mountain zone 1</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="52">
 				<xs:annotation>
-					<xs:documentation xml:lang="de">Gemeinschaftsweidebetrieb</xs:documentation>
-					<xs:documentation xml:lang="fr">Exploitation de pâturage communautaire</xs:documentation>
-					<xs:documentation xml:lang="it">Azienda con pascoli comunitari</xs:documentation>
-					<xs:documentation xml:lang="en">Grazing community</xs:documentation>
+					<xs:documentation xml:lang="de">Bergzone 2</xs:documentation>
+					<xs:documentation xml:lang="fr">Zone de montagne 2</xs:documentation>
+					<xs:documentation xml:lang="it">Zona di montagna 2</xs:documentation>
+					<xs:documentation xml:lang="en">Mountain zone 2</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="53">
 				<xs:annotation>
-					<xs:documentation xml:lang="de">Sömmerungsbetrieb</xs:documentation>
-					<xs:documentation xml:lang="fr">Exploitation d'estivage</xs:documentation>
-					<xs:documentation xml:lang="it">Azienda d'estivazione</xs:documentation>
-					<xs:documentation xml:lang="en">Summering</xs:documentation>
+					<xs:documentation xml:lang="de">Bergzone 3</xs:documentation>
+					<xs:documentation xml:lang="fr">Zone de montagne 3</xs:documentation>
+					<xs:documentation xml:lang="it">Zona di montagna 3</xs:documentation>
+					<xs:documentation xml:lang="en">Mountain zone 3</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="54">
 				<xs:annotation>
-					<xs:documentation xml:lang="de">Betriebsgemeinschaft</xs:documentation>
-					<xs:documentation xml:lang="fr">Communauté d'exploitation</xs:documentation>
-					<xs:documentation xml:lang="it">Comunità aziendale</xs:documentation>
-					<xs:documentation xml:lang="en">Group farming</xs:documentation>
+					<xs:documentation xml:lang="de">Bergzone 4</xs:documentation>
+					<xs:documentation xml:lang="fr">Zone de montagne 4</xs:documentation>
+					<xs:documentation xml:lang="it">Zona di montagna 4</xs:documentation>
+					<xs:documentation xml:lang="en">Mountain zone 4</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="61">
 				<xs:annotation>
-					<xs:documentation xml:lang="de">Bestand</xs:documentation>
-					<xs:documentation xml:lang="fr">Troupeau</xs:documentation>
-					<xs:documentation xml:lang="it">Effettivo</xs:documentation>
-					<xs:documentation xml:lang="en">Herd</xs:documentation>
+					<xs:documentation xml:lang="de">Sömmerungsgebiet</xs:documentation>
+					<xs:documentation xml:lang="fr">Région d'estivage</xs:documentation>
+					<xs:documentation xml:lang="it">Regione d'estivazione</xs:documentation>
+					<xs:documentation xml:lang="en">Summering zone</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="77">
 				<xs:annotation>
-					<xs:documentation xml:lang="de">Viehhandelsunternehmen</xs:documentation>
-					<xs:documentation xml:lang="fr">Exploitation de marchand de bétail</xs:documentation>
-					<xs:documentation xml:lang="it">Azienda che commercia bestiame</xs:documentation>
-					<xs:documentation xml:lang="en">Cattle trade</xs:documentation>
+					<xs:documentation xml:lang="de">Angestammte Flächen im Ausland (nur für Sömmerungsbetriebe)</xs:documentation>
+					<xs:documentation xml:lang="fr">Surfaces exploitées par tradition dans la zone limitrophe étrangère (seulement pour les exploitations d'estivage)</xs:documentation>
+					<xs:documentation xml:lang="it">Superfici nella zona limitrofa coltivate per tradizione (solo por aziende d'estivazione)</xs:documentation>
+					<xs:documentation xml:lang="en">Surfaces traditionally exploited in the foreign border zone (only for summering farms)</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="79">
 				<xs:annotation>
-					<xs:documentation xml:lang="de">Wanderherde</xs:documentation>
-					<xs:documentation xml:lang="fr">Troupeau en transhumance</xs:documentation>
-					<xs:documentation xml:lang="it">Mandria transumante</xs:documentation>
-					<xs:documentation xml:lang="en">Transhumance</xs:documentation>
+					<xs:documentation xml:lang="de">Nicht angestammte Flächen im Ausland (nur für Sömmerungsbetriebe)</xs:documentation>
+					<xs:documentation xml:lang="fr">Surfaces dans la zone limitrophe étrangère qui ne sont pas exploitées par tradition (seulement pour les exploitations d'estivage)</xs:documentation>
+					<xs:documentation xml:lang="it">Superfici nella zona limitrofa non coltivate per tradizione (solo por aziende d'estivazione)</xs:documentation>
+					<xs:documentation xml:lang="en">Zone in the foreign border area that are not traditionally exploited (only for summering farms)</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
