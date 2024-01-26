@@ -308,6 +308,7 @@ Datum				Version				Autor
 				</xs:annotation>
 				<xs:simpleType>
 					<xs:restriction base="xs:token">
+						<xs:pattern value="[0-9]{1,50}"/>
 						<xs:maxLength value="50"/>
 					</xs:restriction>
 				</xs:simpleType>
@@ -329,6 +330,7 @@ Datum				Version				Autor
 				</xs:annotation>
 				<xs:simpleType>
 					<xs:restriction base="xs:token">
+						<xs:pattern value="[0-9]{1,50}"/>
 						<xs:maxLength value="50"/>
 					</xs:restriction>
 				</xs:simpleType>
