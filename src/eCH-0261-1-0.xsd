@@ -121,7 +121,7 @@ Datum				Version				Autor
 					<xs:documentation xml:lang="en">Enterprise responsible for inspection</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="nprCertified" type="xs:boolean" minOccurs="0">
+			<xs:element name="nprCertified" type="eCH-0261:veracityType">
 				<xs:annotation>
 					<xs:documentation xml:lang="de">NPR-Zulassung (Zertifizierung auf der Grundlage des Programms zur Reduzierung von Stickstoff und Phosphor).</xs:documentation>
 					<xs:documentation xml:lang="fr">Certification basée sur le programme de réduction de l'azote et des phosphores.</xs:documentation>
@@ -263,7 +263,7 @@ Datum				Version				Autor
 					<xs:documentation xml:lang="en">See the referenced standard.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="dateOfBirth" type="xs:date" minOccurs="0">
+			<xs:element name="dateOfBirth" type="eCH-0044:datePartiallyKnownType" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="de">Geburtsdatum</xs:documentation>
 					<xs:documentation xml:lang="fr">date de naissance</xs:documentation>
@@ -300,12 +300,17 @@ Datum				Version				Autor
 					<xs:documentation xml:lang="en">identifier of a person</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="personFunction" type="eCH-0261:personFunctionType" minOccurs="1" maxOccurs="unbounded">
+			<xs:element name="personFunction" minOccurs="1" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation xml:lang="de">Funktionen der Person</xs:documentation>
 					<xs:documentation xml:lang="fr">Fonctions de la personne</xs:documentation>
 					<xs:documentation xml:lang="en">Functions of a person</xs:documentation>
 				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:token">
+						<xs:maxLength value="50"/>
+					</xs:restriction>
+				</xs:simpleType>
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
@@ -316,7 +321,7 @@ Datum				Version				Autor
 			<xs:documentation xml:lang="en">The role of a person</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="personFunction-Code">
+			<xs:element name="personFunctionCode">
 				<xs:annotation>
 					<xs:documentation xml:lang="de">Code der Rolle</xs:documentation>
 					<xs:documentation xml:lang="fr">Code du rôle</xs:documentation>
@@ -324,7 +329,7 @@ Datum				Version				Autor
 				</xs:annotation>
 				<xs:simpleType>
 					<xs:restriction base="xs:token">
-						<xs:maxLength value="6"/>
+						<xs:maxLength value="50"/>
 					</xs:restriction>
 				</xs:simpleType>
 			</xs:element>
@@ -343,7 +348,7 @@ Datum				Version				Autor
 				</xs:annotation>
 				<xs:simpleType>
 					<xs:restriction base="xs:token">
-						<xs:maxLength value="256"/>
+						<xs:maxLength value="255"/>
 					</xs:restriction>
 				</xs:simpleType>
 			</xs:element>
@@ -398,7 +403,7 @@ Datum				Version				Autor
 				</xs:annotation>
 				<xs:simpleType>
 					<xs:restriction base="xs:token">
-						<xs:maxLength value="256"/>
+						<xs:maxLength value="255"/>
 					</xs:restriction>
 				</xs:simpleType>
 			</xs:element>
@@ -410,7 +415,7 @@ Datum				Version				Autor
 				</xs:annotation>
 				<xs:simpleType>
 					<xs:restriction base="xs:token">
-						<xs:maxLength value="256"/>
+						<xs:maxLength value="255"/>
 					</xs:restriction>
 				</xs:simpleType>
 			</xs:element>
@@ -422,7 +427,7 @@ Datum				Version				Autor
 				</xs:annotation>
 				<xs:simpleType>
 					<xs:restriction base="xs:token">
-						<xs:maxLength value="256"/>
+						<xs:maxLength value="255"/>
 					</xs:restriction>
 				</xs:simpleType>
 			</xs:element>
@@ -434,7 +439,7 @@ Datum				Version				Autor
 				</xs:annotation>
 				<xs:simpleType>
 					<xs:restriction base="xs:token">
-						<xs:maxLength value="256"/>
+						<xs:maxLength value="255"/>
 					</xs:restriction>
 				</xs:simpleType>
 			</xs:element>
@@ -446,7 +451,7 @@ Datum				Version				Autor
 				</xs:annotation>
 				<xs:simpleType>
 					<xs:restriction base="xs:token">
-						<xs:maxLength value="256"/>
+						<xs:maxLength value="255"/>
 					</xs:restriction>
 				</xs:simpleType>
 			</xs:element>
@@ -458,7 +463,7 @@ Datum				Version				Autor
 				</xs:annotation>
 				<xs:simpleType>
 					<xs:restriction base="xs:token">
-						<xs:maxLength value="256"/>
+						<xs:maxLength value="2000"/>
 					</xs:restriction>
 				</xs:simpleType>
 			</xs:element>
@@ -500,14 +505,6 @@ Datum				Version				Autor
 					<xs:documentation xml:lang="fr">degré Celcius</xs:documentation>
 					<xs:documentation xml:lang="it">grado Celcius</xs:documentation>
 					<xs:documentation xml:lang="en">degree Celcius</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="ρ">
-				<xs:annotation>
-					<xs:documentation xml:lang="de">Raumgewicht</xs:documentation>
-					<xs:documentation xml:lang="fr">masse spécifique</xs:documentation>
-					<xs:documentation xml:lang="it">massa specifica</xs:documentation>
-					<xs:documentation xml:lang="en">Specific mass</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="γ">
@@ -588,6 +585,82 @@ Datum				Version				Autor
 					<xs:documentation xml:lang="fr">pièce/mètre carré</xs:documentation>
 					<xs:documentation xml:lang="it">pezzo/metro quadrato</xs:documentation>
 					<xs:documentation xml:lang="en">piece/square metre</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="measureType">
+		<xs:annotation>
+			<xs:documentation xml:lang="de">Messung mit Wert und Einheit</xs:documentation>
+			<xs:documentation xml:lang="fr">Mesure avec valeur et unité</xs:documentation>
+			<xs:documentation xml:lang="en">Measurement with value and unit</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="value" type="xs:decimal">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Menge, Wert</xs:documentation>
+					<xs:documentation xml:lang="fr">Quantité, valeur</xs:documentation>
+					<xs:documentation xml:lang="en">Quantity, value</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="unit" type="eCH-0261:unitType">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Zugehörige Einheit</xs:documentation>
+					<xs:documentation xml:lang="fr">Unité associée</xs:documentation>
+					<xs:documentation xml:lang="en">Associated unit</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="unitName" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Genauere Bezeichnung der Einheit, wenn im Feld «unit» die Einheit «pc» (Stück) angegeben wurde.</xs:documentation>
+					<xs:documentation xml:lang="fr">Désignation plus précise de l'unité, si l'unité "pc" (pièce) a été indiquée dans le champ "unit".</xs:documentation>
+					<xs:documentation xml:lang="en">More precise designation of the unit if the unit "pc" (piece) was specified in the "unit" field.</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:token">
+						<xs:maxLength value="50"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="veracityType">
+		<xs:annotation>
+			<xs:documentation xml:lang="de">Wahrheitswert</xs:documentation>
+			<xs:documentation xml:lang="fr">Valeur de vérité</xs:documentation>
+			<xs:documentation xml:lang="en">Truth value</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:token">
+			<xs:enumeration value="TRUE">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Wahr</xs:documentation>
+					<xs:documentation xml:lang="fr">Vrai</xs:documentation>
+					<xs:documentation xml:lang="it">Vero</xs:documentation>
+					<xs:documentation xml:lang="en">True</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="FALSE">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Falsch</xs:documentation>
+					<xs:documentation xml:lang="fr">Faux</xs:documentation>
+					<xs:documentation xml:lang="it">Sbagliato</xs:documentation>
+					<xs:documentation xml:lang="en">False</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="NA">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Nicht anwendbar</xs:documentation>
+					<xs:documentation xml:lang="fr">Non applicable</xs:documentation>
+					<xs:documentation xml:lang="it">Non applicabile</xs:documentation>
+					<xs:documentation xml:lang="en">Not applicable</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="UNDEFINED">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Undefiniert</xs:documentation>
+					<xs:documentation xml:lang="fr">Non défini</xs:documentation>
+					<xs:documentation xml:lang="it">Non definito</xs:documentation>
+					<xs:documentation xml:lang="en">Undefined</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
