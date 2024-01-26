@@ -498,7 +498,7 @@ Datum				Version				Autor
 					<xs:documentation xml:lang="de">Stück</xs:documentation>
 					<xs:documentation xml:lang="fr">pièce</xs:documentation>
 					<xs:documentation xml:lang="it">pezzo</xs:documentation>
-					<xs:documentation xml:lang="en">piece, a quantity</xs:documentation>
+					<xs:documentation xml:lang="en">piece</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="°C">
@@ -509,12 +509,28 @@ Datum				Version				Autor
 					<xs:documentation xml:lang="en">degree Celcius</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
+			<xs:enumeration value="J">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Joule</xs:documentation>
+					<xs:documentation xml:lang="fr">Joule</xs:documentation>
+					<xs:documentation xml:lang="it">Joule</xs:documentation>
+					<xs:documentation xml:lang="en">Joule</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
 			<xs:enumeration value="S">
 				<xs:annotation>
 					<xs:documentation xml:lang="de">Siemens</xs:documentation>
 					<xs:documentation xml:lang="fr">Siemens</xs:documentation>
 					<xs:documentation xml:lang="it">Siemens</xs:documentation>
 					<xs:documentation xml:lang="en">Siemens</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="S/m">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Siemens/Meter</xs:documentation>
+					<xs:documentation xml:lang="fr">Siemens/mètres</xs:documentation>
+					<xs:documentation xml:lang="it">Siemens/metri</xs:documentation>
+					<xs:documentation xml:lang="en">Siemens/metre</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="%">
@@ -537,16 +553,16 @@ Datum				Version				Autor
 				<xs:annotation>
 					<xs:documentation xml:lang="de">Kilogramm/Stück</xs:documentation>
 					<xs:documentation xml:lang="fr">kilogramme/pièce</xs:documentation>
-					<xs:documentation xml:lang="it">chilogrammo/litro</xs:documentation>
-					<xs:documentation xml:lang="en">kilogram/litre</xs:documentation>
+					<xs:documentation xml:lang="it">chilogrammo/pezzo</xs:documentation>
+					<xs:documentation xml:lang="en">kilogram/piece</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="n/a">
+			<xs:enumeration value="m">
 				<xs:annotation>
-					<xs:documentation xml:lang="de">Nicht zutreffend</xs:documentation>
-					<xs:documentation xml:lang="fr">n'est pas applicable</xs:documentation>
-					<xs:documentation xml:lang="it">non applicabile</xs:documentation>
-					<xs:documentation xml:lang="en">Not applicable. Not all values have an associated unit but some elements declare unit as required. Use this for those cases.</xs:documentation>
+					<xs:documentation xml:lang="de">Meter</xs:documentation>
+					<xs:documentation xml:lang="fr">mètres</xs:documentation>
+					<xs:documentation xml:lang="it">metri</xs:documentation>
+					<xs:documentation xml:lang="en">metre</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="m2">
@@ -565,12 +581,20 @@ Datum				Version				Autor
 					<xs:documentation xml:lang="en">kilogram/square metre</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="l/m2">
+			<xs:enumeration value="m3/m2">
 				<xs:annotation>
-					<xs:documentation xml:lang="de">Liter/Quadratmeter</xs:documentation>
-					<xs:documentation xml:lang="fr">litre/mètre carré</xs:documentation>
-					<xs:documentation xml:lang="it">litro/metro quadrato</xs:documentation>
-					<xs:documentation xml:lang="en">litre/square metre</xs:documentation>
+					<xs:documentation xml:lang="de">Kubikmeter/Quadratmeter</xs:documentation>
+					<xs:documentation xml:lang="fr">mètres cube/mètre carré</xs:documentation>
+					<xs:documentation xml:lang="it">metri cubi/metro quadrato</xs:documentation>
+					<xs:documentation xml:lang="en">cubic metres/square metre</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="m3/kg">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Kubikmeter/Kilogramm</xs:documentation>
+					<xs:documentation xml:lang="fr">mètres cube/kilogramme</xs:documentation>
+					<xs:documentation xml:lang="it">metri cubi/chilogrammo</xs:documentation>
+					<xs:documentation xml:lang="en">cubic metres/kilogram</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="pc/m2">
@@ -581,9 +605,41 @@ Datum				Version				Autor
 					<xs:documentation xml:lang="en">piece/square metre</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
+			<xs:enumeration value="IU">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Internationale Einheit</xs:documentation>
+					<xs:documentation xml:lang="fr">Unité internationale</xs:documentation>
+					<xs:documentation xml:lang="it">Unità internazionale</xs:documentation>
+					<xs:documentation xml:lang="en">International unit</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="IU/kg">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Internationale Einheit/Kilogramm</xs:documentation>
+					<xs:documentation xml:lang="fr">Unité internationale/kilogramme</xs:documentation>
+					<xs:documentation xml:lang="it">Unità internazionale/chilogrammo</xs:documentation>
+					<xs:documentation xml:lang="en">International unit/kilogram</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="mol">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Mol</xs:documentation>
+					<xs:documentation xml:lang="fr">Mole</xs:documentation>
+					<xs:documentation xml:lang="it">Mole</xs:documentation>
+					<xs:documentation xml:lang="en">Mole</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="n/a">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Nicht zutreffend</xs:documentation>
+					<xs:documentation xml:lang="fr">n'est pas applicable</xs:documentation>
+					<xs:documentation xml:lang="it">non applicabile</xs:documentation>
+					<xs:documentation xml:lang="en">Not applicable. Not all values have an associated unit but some elements declare unit as required. Use this for those cases.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
-	<xs:complexType name="measureType">
+	<xs:complexType name="measurementType">
 		<xs:annotation>
 			<xs:documentation xml:lang="de">Messung mit Wert und Einheit</xs:documentation>
 			<xs:documentation xml:lang="fr">Mesure avec valeur et unité</xs:documentation>
@@ -659,6 +715,43 @@ Datum				Version				Autor
 			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
+	<xs:complexType name="validityType">
+		<xs:annotation>
+			<xs:documentation xml:lang="de">Dieses Element beschreibt Angaben zur Gültigkeit.</xs:documentation>
+			<xs:documentation xml:lang="fr">Cet élément décrit des informations sur la validité.</xs:documentation>
+			<xs:documentation xml:lang="en">This element describes information on validity.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="validFromInclusive" type="xs:date">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Anfangsdatum der Gültigkeit.</xs:documentation>
+					<xs:documentation xml:lang="fr">Date de début de validité.</xs:documentation>
+					<xs:documentation xml:lang="en">Start date of validity.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="validToExclusive" type="xs:date" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Enddatum der Gültigkeit (exklusiv). </xs:documentation>
+					<xs:documentation xml:lang="fr">Date de fin de validité (exclusive). </xs:documentation>
+					<xs:documentation xml:lang="en">End date of validity (exclusive). </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="supersedesId" type="eCH-0261:identifierType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">ID des Objektes, welches mit dem aktuellen Objekt ersetzt wird.</xs:documentation>
+					<xs:documentation xml:lang="fr">ID de l'objet qui sera remplacé par l'objet actuel.</xs:documentation>
+					<xs:documentation xml:lang="en">ID of the object that is replaced with the current object.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="supersededById" type="eCH-0261:identifierType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">ID des Objekts, welches das aktuelle Ob-jekt ersetzt.</xs:documentation>
+					<xs:documentation xml:lang="fr">ID de l'objet qui remplace l'objet actuel.</xs:documentation>
+					<xs:documentation xml:lang="en">ID of the object that replaces the current object.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
 	<xs:complexType name="enumeratedItemType">
 		<xs:annotation>
 			<xs:documentation xml:lang="de">Dieses Element ist für Listen beabsichtigt, die Identifikatoren und Deskriptoren beinhalten. Solche Listen können statischer oder dynamischer Natur sein.</xs:documentation>
@@ -685,18 +778,11 @@ Datum				Version				Autor
 					<xs:documentation xml:lang="en">Descriptor (multilingual)</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="validFromInclusive" type="xs:date" minOccurs="0">
+			<xs:element name="validity" minOccurs="0" type="eCH-0261:validityType">
 				<xs:annotation>
-					<xs:documentation xml:lang="de">Anfangsdatum der Gültigkeit. Ermöglicht die Bestimmung, dass der jeweilige Eintrag ab einem bestimmten Datum verwendet werden darf.</xs:documentation>
-					<xs:documentation xml:lang="fr">La date de début de cette définition, y compris. Cela permet d'annuler une définition ou de la retirer de la circulation à partir d'une certaine date.</xs:documentation>
-					<xs:documentation xml:lang="en">The begin date of this definition, inclusive. This allows a definition to be entered into circulation as of a specific date.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="validToInclusive" type="xs:date" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation xml:lang="de">Enddatum der Gültigkeit. Ermöglicht das Ausserkraftsetzen eines Eintrags. Falls ein Eintrag aus dem Verkehr genommen werden soll oder falls eine Mutation vorgenommen wurde, kann er mit dem Datum, bis zu welchem er gültig war, versehen werden. Die Liste bleibt so rückwärtskompatibel.</xs:documentation>
-					<xs:documentation xml:lang="fr">La date de fin de cette définition, inclusivement. Cela permet à une définition d'être retirée de la circulation active sans affecter l'usage précédent.</xs:documentation>
-					<xs:documentation xml:lang="en">The end date of this definition, inclusive. This allows a definition to be removed from active circulation without affecting previous usage.</xs:documentation>
+					<xs:documentation xml:lang="de">Informationen zur Gültigkeit (Anfangs- und Enddatum der Gültigkeit).</xs:documentation>
+					<xs:documentation xml:lang="fr">Informations sur la validité (date de début et de fin de validité).</xs:documentation>
+					<xs:documentation xml:lang="en">Information on validity (start and end date of validity).</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
