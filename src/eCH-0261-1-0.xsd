@@ -509,20 +509,12 @@ Datum				Version				Autor
 					<xs:documentation xml:lang="en">degree Celcius</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="γ">
+			<xs:enumeration value="S">
 				<xs:annotation>
-					<xs:documentation xml:lang="de">gamma</xs:documentation>
-					<xs:documentation xml:lang="fr">gamma</xs:documentation>
-					<xs:documentation xml:lang="it">gamma</xs:documentation>
-					<xs:documentation xml:lang="en">gamma</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="µS">
-				<xs:annotation>
-					<xs:documentation xml:lang="de">Mikro-Siemens</xs:documentation>
-					<xs:documentation xml:lang="fr">micro siemens</xs:documentation>
-					<xs:documentation xml:lang="it">micro siemens</xs:documentation>
-					<xs:documentation xml:lang="en">micro siemens</xs:documentation>
+					<xs:documentation xml:lang="de">Siemens</xs:documentation>
+					<xs:documentation xml:lang="fr">Siemens</xs:documentation>
+					<xs:documentation xml:lang="it">Siemens</xs:documentation>
+					<xs:documentation xml:lang="en">Siemens</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="%">
