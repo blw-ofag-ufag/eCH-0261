@@ -28,17 +28,14 @@ Datum				Version				Autor
 				<xs:annotation>
 					<xs:documentation xml:lang="de">Stammdaten der rechtlichen Einheit</xs:documentation>
 					<xs:documentation xml:lang="fr">Données de référence de l’unité légale</xs:documentation>
-					<xs:documentation xml:lang="en">Master data of the legal unit
-                    </xs:documentation>
+					<xs:documentation xml:lang="en">Master data of the legal unit</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="agriculturalAdditionToLegalUnit" type="eCH-0261:agriculturalAdditionToLegalUnitType">
 				<xs:annotation>
 					<xs:documentation xml:lang="de">Agrarspezifische Merkmale der rechtlichen Einheit</xs:documentation>
-					<xs:documentation xml:lang="fr">Caractéristiques spécifiques agricoles de l'unité légale
-                    </xs:documentation>
-					<xs:documentation xml:lang="en">Specific agricultural characteristics of the legal unit
-                    </xs:documentation>
+					<xs:documentation xml:lang="fr">Caractéristiques spécifiques agricoles de l'unité légale</xs:documentation>
+					<xs:documentation xml:lang="en">Specific agricultural characteristics of the legal unit</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
@@ -52,16 +49,9 @@ Datum				Version				Autor
 		<xs:sequence>
 			<xs:element name="parentLegalUnit" type="eCH-0108:uidType" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation xml:lang="de">Übergeordnete rechtliche Einheit. Es ist möglich, dass es mehrere
-                        übergeordnete rechtliche Einheiten gibt. Dies kann z.B. bei Betriebszweiggemeinschaften und
-                        ÖLN-Gemeinschaft der Fall sein.
-                    </xs:documentation>
-					<xs:documentation xml:lang="fr">Unité légale parente. Il peut y avoir plusieursunités légales
-                        parentes (communauté partielle d'exploitation et communauté PER).
-                    </xs:documentation>
-					<xs:documentation xml:lang="en">Parent legal unit. There can be more than one parent legal unit,
-                        e.g. as is the case with group farming branches and REP-communities.
-                    </xs:documentation>
+					<xs:documentation xml:lang="de">Übergeordnete rechtliche Einheit. Es ist möglich, dass es mehrere übergeordnete rechtliche Einheiten gibt. Dies kann z.B. bei Betriebszweiggemeinschaften und ÖLN-Gemeinschaft der Fall sein.</xs:documentation>
+					<xs:documentation xml:lang="fr">Unité légale parente. Il peut y avoir plusieursunités légales parentes (communauté partielle d'exploitation et communauté PER).</xs:documentation>
+					<xs:documentation xml:lang="en">Parent legal unit. There can be more than one parent legal unit, e.g. as is the case with group farming branches and REP-communities.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="personWithFunction" type="eCH-0261:personWithFunctionType" minOccurs="0" maxOccurs="unbounded">
@@ -73,14 +63,9 @@ Datum				Version				Autor
 			</xs:element>
 			<xs:element name="lastMutation" type="xs:dateTime" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="de">Datum, an dem die Gültigkeit beginnt. Ermöglicht Historisierung und
-                        Versionierung.
-                    </xs:documentation>
-					<xs:documentation xml:lang="fr">Date de début de validité. Permet l'historisation et le versionage
-                    </xs:documentation>
-					<xs:documentation xml:lang="en">Beginning date of validity, inclusive. This enables an audit trail
-                        and versioning.
-                    </xs:documentation>
+					<xs:documentation xml:lang="de">Zeitpunkt, an dem die Gültigkeit beginnt. Ermöglicht Historisierung und Versionierung.</xs:documentation>
+					<xs:documentation xml:lang="fr">Date et heure de début de validité. Permet l'historisation et le versionage.</xs:documentation>
+					<xs:documentation xml:lang="en">Beginning date and time of validity, inclusive. This enables an audit trail and versioning.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
@@ -96,26 +81,23 @@ Datum				Version				Autor
 				<xs:annotation>
 					<xs:documentation xml:lang="de">Stammdaten der örtlichen Einheit</xs:documentation>
 					<xs:documentation xml:lang="fr">Données de référence de l’unité locale</xs:documentation>
-					<xs:documentation xml:lang="en">Master data of the local unit
-                    </xs:documentation>
+					<xs:documentation xml:lang="en">Master data of the local unit</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="agriculturalAdditionToLocalUnit" type="eCH-0261:agriculturalAdditionToLocalUnitType">
 				<xs:annotation>
-					<xs:documentation xml:lang="de">Agrarspezifische Ergänzung der örtlichen Einheit</xs:documentation>
-					<xs:documentation xml:lang="fr">Caractéristiques spécifiques agricoles de l'unité locale.
-                    </xs:documentation>
-					<xs:documentation xml:lang="en">Specific agricultural characteristics of the local unit
-                    </xs:documentation>
+					<xs:documentation xml:lang="de">Agrarspezifische Ergänzung der örtlichen Einheit.</xs:documentation>
+					<xs:documentation xml:lang="fr">Caractéristiques spécifiques agricoles de l'unité locale.</xs:documentation>
+					<xs:documentation xml:lang="en">Specific agricultural characteristics of the local unit.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="agriculturalAdditionToLocalUnitType">
 		<xs:annotation>
-			<xs:documentation xml:lang="de">Agrarspezifische Merkmale der örtlichen Einheit</xs:documentation>
+			<xs:documentation xml:lang="de">Agrarspezifische Merkmale der örtlichen Einheit.</xs:documentation>
 			<xs:documentation xml:lang="fr">Caractéristiques spécifiques agricoles de l'unité locale.</xs:documentation>
-			<xs:documentation xml:lang="en">Specific agricultural characteristics of the local unit</xs:documentation>
+			<xs:documentation xml:lang="en">Specific agricultural characteristics of the local unit.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="parentLocalId" type="eCH-0108:localIdType" minOccurs="0" maxOccurs="unbounded">
@@ -132,37 +114,25 @@ Datum				Version				Autor
 					<xs:documentation xml:lang="en">Form of agricultural development</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="inspectionOrganisation" type="eCH-0108:uidType" minOccurs="0">
+			<xs:element name="inspectionOrganisation" type="eCH-0108:uidType" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation xml:lang="de">Unternehmen, das für die Kontrollen verantwortlich ist
-                    </xs:documentation>
+					<xs:documentation xml:lang="de">Unternehmen, das für die Kontrollen verantwortlich ist</xs:documentation>
 					<xs:documentation xml:lang="fr">Entreprise responsable des contrôles</xs:documentation>
 					<xs:documentation xml:lang="en">Enterprise responsible for inspection</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="nprCertified" type="xs:boolean" minOccurs="0">
+			<xs:element name="nprCertified" type="eCH-0261:veracityType">
 				<xs:annotation>
-					<xs:documentation xml:lang="de">NPR-Zulassung (Zertifizierung auf der Grundlage des Programms zur
-                        Reduzierung von Stickstoff und Phosphor)
-                    </xs:documentation>
-					<xs:documentation xml:lang="fr">Certification basée sur le programme de réduction de l'azote et des
-                        phosphores
-                    </xs:documentation>
-					<xs:documentation xml:lang="en">Certification based on the nitrogen and phosporous reduction
-                        programme.
-                    </xs:documentation>
+					<xs:documentation xml:lang="de">NPR-Zulassung (Zertifizierung auf der Grundlage des Programms zur Reduzierung von Stickstoff und Phosphor).</xs:documentation>
+					<xs:documentation xml:lang="fr">Certification basée sur le programme de réduction de l'azote et des phosphores.</xs:documentation>
+					<xs:documentation xml:lang="en">Certification based on the nitrogen and phosporous reduction programme.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="agriculturalZone" type="eCH-0261:agriculturalZoneType" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="de">Landwirtschaftliche Zone der örtlichen Einheit. Gewichteter
-                        Durchschnitt der landwirtschaftlichen Zonen der verschiedenen Kulturen.
-                    </xs:documentation>
-					<xs:documentation xml:lang="fr">Zone agricole de l'unité locale. Moyenne pondérée de la zone
-                        agricole des différentes cultures.
-                    </xs:documentation>
-					<xs:documentation xml:lang="en">Weighted average of the agricultural area of the different crops.
-                    </xs:documentation>
+					<xs:documentation xml:lang="de">Landwirtschaftliche Zone der örtlichen Einheit. Gewichteter Durchschnitt der landwirtschaftlichen Zonen der verschiedenen Kulturen.</xs:documentation>
+					<xs:documentation xml:lang="fr">Zone agricole de l'unité locale. Moyenne pondérée de la zone agricole des différentes cultures.</xs:documentation>
+					<xs:documentation xml:lang="en">Weighted average of the agricultural area of the different crops.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="agriculturalOversightAuthority" type="eCH-0261:agriculturalOversightAuthorityType" minOccurs="0">
@@ -172,36 +142,27 @@ Datum				Version				Autor
 					<xs:documentation xml:lang="en">See the referenced type.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="personPersonFunction" type="eCH-0261:personWithFunctionType" minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="personWithFunction" type="eCH-0261:personWithFunctionType" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation xml:lang="de">Person/Function</xs:documentation>
 					<xs:documentation xml:lang="fr">Personne/Fonction</xs:documentation>
 					<xs:documentation xml:lang="en">Person/personFunction</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="validFromInclusive" type="xs:date" minOccurs="0">
+			<xs:element name="lastMutation" type="xs:dateTime" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="de">Gültig ab (inklusiv)</xs:documentation>
-					<xs:documentation xml:lang="fr">Valable à partir de (inclus)</xs:documentation>
-					<xs:documentation xml:lang="en">Valid From, inclusive. This enables an audit trail and versioning.</xs:documentation>
+					<xs:documentation xml:lang="de">Zeitpunkt, an dem die Gültigkeit beginnt. Ermöglicht Historisierung und Versionierung.</xs:documentation>
+					<xs:documentation xml:lang="fr">Date et heure de début de validité. Permet l'historisation et le versionage.</xs:documentation>
+					<xs:documentation xml:lang="en">Beginning date and time of validity, inclusive. This enables an audit trail and versioning.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="agriculturalOversightAuthorityType">
 		<xs:annotation>
-			<xs:documentation xml:lang="de">Kanton oder Land (im Falle Liechtenstein), der/das für diese
-				örtliche Einheit für Agrarthemen zuständig ist. Dies kann vom Standortkanton der örtlichen
-				Einheit abweichen.
-			</xs:documentation>
-			<xs:documentation xml:lang="fr">Canton ou pays (dans le cas du Liechtenstein) responsable de cette
-				unité locale pour les questions agricoles. Celui-ci peut être différent du canton de
-				localisation de l'unité locale.
-			</xs:documentation>
-			<xs:documentation xml:lang="en">Canton or country (in the case of Liechtenstein) with oversight
-				responsibility for agricultural concerns for this local unit. May differ from the canton where
-				the local unit is located.
-			</xs:documentation>
+			<xs:documentation xml:lang="de">Kanton oder Land (im Falle Liechtenstein), der/das für diese örtliche Einheit für Agrarthemen zuständig ist. Dies kann vom Standortkanton der örtlichen Einheit abweichen.</xs:documentation>
+			<xs:documentation xml:lang="fr">Canton ou pays (dans le cas du Liechtenstein) responsable de cette unité locale pour les questions agricoles. Celui-ci peut être différent du canton de localisation de l'unité locale.</xs:documentation>
+			<xs:documentation xml:lang="en">Canton or country (in the case of Liechtenstein) with oversight responsibility for agricultural concerns for this local unit. May differ from the canton where the local unit is located.</xs:documentation>
 		</xs:annotation>
 		<xs:choice>
 			<xs:element name="cantonalAuthority" type="eCH-0007:cantonAbbreviationType"/>
@@ -274,7 +235,7 @@ Datum				Version				Autor
 					<xs:documentation xml:lang="en">See the referenced standard.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="officialName" type="eCH-0010:lastNameType">
+			<xs:element name="lastName" type="eCH-0010:lastNameType">
 				<xs:annotation>
 					<xs:documentation xml:lang="de">Nachname. Siehe den referenzierten Standard</xs:documentation>
 					<xs:documentation xml:lang="fr">Voir standard référencé.</xs:documentation>
@@ -302,7 +263,7 @@ Datum				Version				Autor
 					<xs:documentation xml:lang="en">See the referenced standard.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="dateOfBirth" type="xs:date" minOccurs="0">
+			<xs:element name="dateOfBirth" type="eCH-0044:datePartiallyKnownType" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="de">Geburtsdatum</xs:documentation>
 					<xs:documentation xml:lang="fr">date de naissance</xs:documentation>
@@ -320,9 +281,7 @@ Datum				Version				Autor
 				<xs:annotation>
 					<xs:documentation xml:lang="de">Gültig ab (inklusiv)</xs:documentation>
 					<xs:documentation xml:lang="fr">Valable à partir de (inclus)</xs:documentation>
-					<xs:documentation xml:lang="en">Beginning date of validity, inclusive. This enables an audit trail
-                        and versioning.
-                    </xs:documentation>
+					<xs:documentation xml:lang="en">Beginning date of validity, inclusive. This enables an audit trail and versioning.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
@@ -331,10 +290,7 @@ Datum				Version				Autor
 		<xs:annotation>
 			<xs:documentation xml:lang="de">Person mit Funktion</xs:documentation>
 			<xs:documentation xml:lang="de">Personne avec rôle associé</xs:documentation>
-			<xs:documentation xml:lang="en">A person mapped to a role. The relationship of a person to a PersonFunction.
-                This is useful for communications in which assignments are provided by or shared with systems other than
-                one's own.
-            </xs:documentation>
+			<xs:documentation xml:lang="en">A person mapped to a role. The relationship of a person to a PersonFunction. This is useful for communications in which assignments are provided by or shared with systems other than one's own.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="personIdentifier" type="eCH-0261:personIdentifierType" minOccurs="1">
@@ -344,12 +300,18 @@ Datum				Version				Autor
 					<xs:documentation xml:lang="en">identifier of a person</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="personFunction" type="eCH-0261:personFunctionType" minOccurs="1" maxOccurs="unbounded">
+			<xs:element name="personFunction" minOccurs="1" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation xml:lang="de">Funktionen der Person</xs:documentation>
 					<xs:documentation xml:lang="fr">Fonctions de la personne</xs:documentation>
 					<xs:documentation xml:lang="en">Functions of a person</xs:documentation>
 				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:token">
+						<xs:pattern value="[0-9]{1,50}"/>
+						<xs:maxLength value="50"/>
+					</xs:restriction>
+				</xs:simpleType>
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
@@ -360,7 +322,7 @@ Datum				Version				Autor
 			<xs:documentation xml:lang="en">The role of a person</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="personFunction-Code">
+			<xs:element name="personFunctionCode">
 				<xs:annotation>
 					<xs:documentation xml:lang="de">Code der Rolle</xs:documentation>
 					<xs:documentation xml:lang="fr">Code du rôle</xs:documentation>
@@ -368,33 +330,27 @@ Datum				Version				Autor
 				</xs:annotation>
 				<xs:simpleType>
 					<xs:restriction base="xs:token">
-						<xs:maxLength value="6"/>
+						<xs:pattern value="[0-9]{1,50}"/>
+						<xs:maxLength value="50"/>
 					</xs:restriction>
 				</xs:simpleType>
 			</xs:element>
 			<xs:element name="descriptor" type="eCH-0261:descriptorType" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="de">Beschreibung der Funktion</xs:documentation>
-					<xs:documentation xml:lang="fr">Description de la rôle</xs:documentation>
-					<xs:documentation xml:lang="en">Description of the role. See the referenced standard.
-                    </xs:documentation>
+					<xs:documentation xml:lang="de">Beschreibung der Funktion.</xs:documentation>
+					<xs:documentation xml:lang="fr">Description de la rôle.</xs:documentation>
+					<xs:documentation xml:lang="en">Description of the role. See the referenced standard.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="freeformDesignation" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="de">Freitext Bezeichnung (falls ein Code vom Typ "Andere" gewählt
-                        wurde)
-                    </xs:documentation>
-					<xs:documentation xml:lang="fr">Désignation en texte libre (si un code de type "Autre" a été choisi)
-                        a été utilisé)
-                    </xs:documentation>
-					<xs:documentation xml:lang="en">A freeform designation for usage should a pre-defined entry not
-                        prove suitable. Use sparingly and only when using the code "Other".
-                    </xs:documentation>
+					<xs:documentation xml:lang="de">Freitext Bezeichnung (falls ein Code vom Typ "Andere" gewählt wurde).</xs:documentation>
+					<xs:documentation xml:lang="fr">Désignation en texte libre (si un code de type "Autre" a été choisi) a été utilisé).</xs:documentation>
+					<xs:documentation xml:lang="en">A freeform designation for usage should a pre-defined entry not prove suitable. Use sparingly and only when using the code "Other".</xs:documentation>
 				</xs:annotation>
 				<xs:simpleType>
 					<xs:restriction base="xs:token">
-						<xs:maxLength value="256"/>
+						<xs:maxLength value="255"/>
 					</xs:restriction>
 				</xs:simpleType>
 			</xs:element>
@@ -405,11 +361,7 @@ Datum				Version				Autor
 		<xs:annotation>
 			<xs:documentation xml:lang="de">Ein weltweit eindeutiger Identifikator. Durch Angabe eines Systems oder einer Behörde kann die Eindeutigkeit der Kennung festgestellt werden. Je nach dem Kontext der Verwendung dieser Kennung kann es sich um einen Primär- oder Ersatzschlüssel in einem beliebigen System handeln. Verbrauchende Elemente können auf dieses Element mit einer Kardinalität größer als 1 verweisen, so dass eine Zuordnung zwischen technischen Speicher- und Herkunftssystemen oder Aufzeichnungssystemen möglich ist.</xs:documentation>
 			<xs:documentation xml:lang="fr">Un identifiant unique au niveau mondial. L'unicité de l'identifiant peut être établie par l'indication d'un système ou d'une autorité. Selon le contexte de l'utilisation de cet identifiant, il peut s'agir d'une clé primaire ou de substitution dans n'importe quel système. Les éléments consommateurs peuvent se référer à cet élément avec une cardinalité supérieure à 1, ce qui permet d'établir une correspondance entre le stockage technique et les systèmes ou systèmes d'enregistrement d'origine.</xs:documentation>
-			<xs:documentation xml:lang="en">A globally unique identifier. Via indication of a system or authority, the
-                uniqueness of the id can be established. Depending on the context of the usage of this id, this can be a
-                primary or surrogate key in any system. Mapping of identifiers is not part of the specification but can
-                be provided by systems.
-            </xs:documentation>
+			<xs:documentation xml:lang="en">A globally unique identifier. Via indication of a system or authority, the uniqueness of the id can be established. Depending on the context of the usage of this id, this can be a primary or surrogate key in any system. Mapping of identifiers is not part of the specification but can be provided by systems.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="id">
@@ -453,7 +405,7 @@ Datum				Version				Autor
 				</xs:annotation>
 				<xs:simpleType>
 					<xs:restriction base="xs:token">
-						<xs:maxLength value="256"/>
+						<xs:maxLength value="255"/>
 					</xs:restriction>
 				</xs:simpleType>
 			</xs:element>
@@ -465,7 +417,7 @@ Datum				Version				Autor
 				</xs:annotation>
 				<xs:simpleType>
 					<xs:restriction base="xs:token">
-						<xs:maxLength value="256"/>
+						<xs:maxLength value="255"/>
 					</xs:restriction>
 				</xs:simpleType>
 			</xs:element>
@@ -477,7 +429,7 @@ Datum				Version				Autor
 				</xs:annotation>
 				<xs:simpleType>
 					<xs:restriction base="xs:token">
-						<xs:maxLength value="256"/>
+						<xs:maxLength value="255"/>
 					</xs:restriction>
 				</xs:simpleType>
 			</xs:element>
@@ -489,7 +441,7 @@ Datum				Version				Autor
 				</xs:annotation>
 				<xs:simpleType>
 					<xs:restriction base="xs:token">
-						<xs:maxLength value="256"/>
+						<xs:maxLength value="255"/>
 					</xs:restriction>
 				</xs:simpleType>
 			</xs:element>
@@ -501,7 +453,7 @@ Datum				Version				Autor
 				</xs:annotation>
 				<xs:simpleType>
 					<xs:restriction base="xs:token">
-						<xs:maxLength value="256"/>
+						<xs:maxLength value="255"/>
 					</xs:restriction>
 				</xs:simpleType>
 			</xs:element>
@@ -509,12 +461,11 @@ Datum				Version				Autor
 				<xs:annotation>
 					<xs:documentation xml:lang="de">Beschreibung der Bezeichnung</xs:documentation>
 					<xs:documentation xml:lang="fr">Explication de cette description</xs:documentation>
-					<xs:documentation xml:lang="en">The explanation of this descriptor, i. e. its usage.
-                    </xs:documentation>
+					<xs:documentation xml:lang="en">The explanation of this descriptor, i. e. its usage</xs:documentation>
 				</xs:annotation>
 				<xs:simpleType>
 					<xs:restriction base="xs:token">
-						<xs:maxLength value="256"/>
+						<xs:maxLength value="2000"/>
 					</xs:restriction>
 				</xs:simpleType>
 			</xs:element>
@@ -523,17 +474,14 @@ Datum				Version				Autor
 	<xs:simpleType name="unitType">
 		<xs:annotation>
 			<xs:documentation xml:lang="de">Einheit</xs:documentation>
-			<xs:documentation xml:lang="en">The unit used. This is a limited subset derived from but not limited to SI.
-                For simplicity, units composed of other units (ratios) are contained within this definition. For those
-                cases in which a unit is not applicable but nevertheless required, an "n/a" entry is provided.
-            </xs:documentation>
+			<xs:documentation xml:lang="en">The unit used. This is a limited subset derived from but not limited to SI. For simplicity, units composed of other units (ratios) are contained within this definition. For those cases in which a unit is not applicable but nevertheless required, an "n/a" entry is provided.</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:token">
 			<xs:enumeration value="kg">
 				<xs:annotation>
 					<xs:documentation xml:lang="de">Kilogramm</xs:documentation>
 					<xs:documentation xml:lang="fr">kilogramme</xs:documentation>
-					<xs:documentation xml:lang="it">kilogrammo</xs:documentation>
+					<xs:documentation xml:lang="it">chilogrammo</xs:documentation>
 					<xs:documentation xml:lang="en">kilogram</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
@@ -550,7 +498,7 @@ Datum				Version				Autor
 					<xs:documentation xml:lang="de">Stück</xs:documentation>
 					<xs:documentation xml:lang="fr">pièce</xs:documentation>
 					<xs:documentation xml:lang="it">pezzo</xs:documentation>
-					<xs:documentation xml:lang="en">piece, a quantity</xs:documentation>
+					<xs:documentation xml:lang="en">piece</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="°C">
@@ -561,35 +509,35 @@ Datum				Version				Autor
 					<xs:documentation xml:lang="en">degree Celcius</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="ρ">
+			<xs:enumeration value="J">
 				<xs:annotation>
-					<xs:documentation xml:lang="de">Raumgewicht</xs:documentation>
-					<xs:documentation xml:lang="fr">masse spécifique</xs:documentation>
-					<xs:documentation xml:lang="it">massa specifica</xs:documentation>
-					<xs:documentation xml:lang="en">Specific mass</xs:documentation>
+					<xs:documentation xml:lang="de">Joule</xs:documentation>
+					<xs:documentation xml:lang="fr">Joule</xs:documentation>
+					<xs:documentation xml:lang="it">Joule</xs:documentation>
+					<xs:documentation xml:lang="en">Joule</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="γ">
+			<xs:enumeration value="S">
 				<xs:annotation>
-					<xs:documentation xml:lang="de">gamma</xs:documentation>
-					<xs:documentation xml:lang="fr">gamma</xs:documentation>
-					<xs:documentation xml:lang="it">gamma</xs:documentation>
-					<xs:documentation xml:lang="en">gamma</xs:documentation>
+					<xs:documentation xml:lang="de">Siemens</xs:documentation>
+					<xs:documentation xml:lang="fr">Siemens</xs:documentation>
+					<xs:documentation xml:lang="it">Siemens</xs:documentation>
+					<xs:documentation xml:lang="en">Siemens</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="µS">
+			<xs:enumeration value="S/m">
 				<xs:annotation>
-					<xs:documentation xml:lang="de">Mikro-Siemens</xs:documentation>
-					<xs:documentation xml:lang="fr">micro siemens</xs:documentation>
-					<xs:documentation xml:lang="it">micro siemens</xs:documentation>
-					<xs:documentation xml:lang="en">micro siemens</xs:documentation>
+					<xs:documentation xml:lang="de">Siemens/Meter</xs:documentation>
+					<xs:documentation xml:lang="fr">Siemens/mètres</xs:documentation>
+					<xs:documentation xml:lang="it">Siemens/metri</xs:documentation>
+					<xs:documentation xml:lang="en">Siemens/metre</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="%">
 				<xs:annotation>
 					<xs:documentation xml:lang="de">Prozent</xs:documentation>
-					<xs:documentation xml:lang="fr">pour cent</xs:documentation>
-					<xs:documentation xml:lang="it">per cento</xs:documentation>
+					<xs:documentation xml:lang="fr">pourcent</xs:documentation>
+					<xs:documentation xml:lang="it">percento</xs:documentation>
 					<xs:documentation xml:lang="en">percent</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
@@ -597,26 +545,24 @@ Datum				Version				Autor
 				<xs:annotation>
 					<xs:documentation xml:lang="de">Kilogramm/Kubikmeter</xs:documentation>
 					<xs:documentation xml:lang="fr">kilogramme/mètre cube</xs:documentation>
-					<xs:documentation xml:lang="it">kilogrammo/metro cubo</xs:documentation>
+					<xs:documentation xml:lang="it">chilogrammo/metro cubo</xs:documentation>
 					<xs:documentation xml:lang="en">kilogram/cubic metre</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="kg/pc">
 				<xs:annotation>
-					<xs:documentation xml:lang="de">KiloGramm/Stück</xs:documentation>
+					<xs:documentation xml:lang="de">Kilogramm/Stück</xs:documentation>
 					<xs:documentation xml:lang="fr">kilogramme/pièce</xs:documentation>
-					<xs:documentation xml:lang="it">kilogrammo/litro</xs:documentation>
-					<xs:documentation xml:lang="en">kilogram/litre</xs:documentation>
+					<xs:documentation xml:lang="it">chilogrammo/pezzo</xs:documentation>
+					<xs:documentation xml:lang="en">kilogram/piece</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="n/a">
+			<xs:enumeration value="m">
 				<xs:annotation>
-					<xs:documentation xml:lang="de">Nicht zutreffend</xs:documentation>
-					<xs:documentation xml:lang="fr">n'est pas applicable</xs:documentation>
-					<xs:documentation xml:lang="it">non applicabile</xs:documentation>
-					<xs:documentation xml:lang="en">Not applicable. Not all values have an associated unit but some
-                        elements declare unit as required. Use this for those cases.
-                    </xs:documentation>
+					<xs:documentation xml:lang="de">Meter</xs:documentation>
+					<xs:documentation xml:lang="fr">mètres</xs:documentation>
+					<xs:documentation xml:lang="it">metri</xs:documentation>
+					<xs:documentation xml:lang="en">metre</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="m2">
@@ -629,47 +575,195 @@ Datum				Version				Autor
 			</xs:enumeration>
 			<xs:enumeration value="kg/m2">
 				<xs:annotation>
-					<xs:documentation xml:lang="de">Gramm/Quadratmeter</xs:documentation>
-					<xs:documentation xml:lang="fr">gramme/mètres carrés</xs:documentation>
-					<xs:documentation xml:lang="it">grammo/metri quadrati</xs:documentation>
-					<xs:documentation xml:lang="en">gram/square metre</xs:documentation>
+					<xs:documentation xml:lang="de">Kilogramm/Quadratmeter</xs:documentation>
+					<xs:documentation xml:lang="fr">kilogramme/mètre carré</xs:documentation>
+					<xs:documentation xml:lang="it">chilogrammo/metro quadrato</xs:documentation>
+					<xs:documentation xml:lang="en">kilogram/square metre</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="l/m2">
+			<xs:enumeration value="m3/m2">
 				<xs:annotation>
-					<xs:documentation xml:lang="de">Liter/Quadratmeter</xs:documentation>
-					<xs:documentation xml:lang="fr">litre/mètres carrés</xs:documentation>
-					<xs:documentation xml:lang="it">litro/metri quadrati</xs:documentation>
-					<xs:documentation xml:lang="en">litre/square metre</xs:documentation>
+					<xs:documentation xml:lang="de">Kubikmeter/Quadratmeter</xs:documentation>
+					<xs:documentation xml:lang="fr">mètres cube/mètre carré</xs:documentation>
+					<xs:documentation xml:lang="it">metri cubi/metro quadrato</xs:documentation>
+					<xs:documentation xml:lang="en">cubic metres/square metre</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="m3/kg">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Kubikmeter/Kilogramm</xs:documentation>
+					<xs:documentation xml:lang="fr">mètres cube/kilogramme</xs:documentation>
+					<xs:documentation xml:lang="it">metri cubi/chilogrammo</xs:documentation>
+					<xs:documentation xml:lang="en">cubic metres/kilogram</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="pc/m2">
 				<xs:annotation>
 					<xs:documentation xml:lang="de">Stück/Quadratmeter</xs:documentation>
-					<xs:documentation xml:lang="fr">pièce/mètres carrés</xs:documentation>
-					<xs:documentation xml:lang="it">pezzo/metri quadrati</xs:documentation>
+					<xs:documentation xml:lang="fr">pièce/mètre carré</xs:documentation>
+					<xs:documentation xml:lang="it">pezzo/metro quadrato</xs:documentation>
 					<xs:documentation xml:lang="en">piece/square metre</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="IU">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Internationale Einheit</xs:documentation>
+					<xs:documentation xml:lang="fr">Unité internationale</xs:documentation>
+					<xs:documentation xml:lang="it">Unità internazionale</xs:documentation>
+					<xs:documentation xml:lang="en">International unit</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="IU/kg">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Internationale Einheit/Kilogramm</xs:documentation>
+					<xs:documentation xml:lang="fr">Unité internationale/kilogramme</xs:documentation>
+					<xs:documentation xml:lang="it">Unità internazionale/chilogrammo</xs:documentation>
+					<xs:documentation xml:lang="en">International unit/kilogram</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="mol">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Mol</xs:documentation>
+					<xs:documentation xml:lang="fr">Mole</xs:documentation>
+					<xs:documentation xml:lang="it">Mole</xs:documentation>
+					<xs:documentation xml:lang="en">Mole</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="n/a">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Nicht zutreffend</xs:documentation>
+					<xs:documentation xml:lang="fr">n'est pas applicable</xs:documentation>
+					<xs:documentation xml:lang="it">non applicabile</xs:documentation>
+					<xs:documentation xml:lang="en">Not applicable. Not all values have an associated unit but some elements declare unit as required. Use this for those cases.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
+	<xs:complexType name="measurementType">
+		<xs:annotation>
+			<xs:documentation xml:lang="de">Messung mit Wert und Einheit</xs:documentation>
+			<xs:documentation xml:lang="fr">Mesure avec valeur et unité</xs:documentation>
+			<xs:documentation xml:lang="en">Measurement with value and unit</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="value" type="xs:decimal">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Menge, Wert</xs:documentation>
+					<xs:documentation xml:lang="fr">Quantité, valeur</xs:documentation>
+					<xs:documentation xml:lang="en">Quantity, value</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="unit" type="eCH-0261:unitType">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Zugehörige Einheit</xs:documentation>
+					<xs:documentation xml:lang="fr">Unité associée</xs:documentation>
+					<xs:documentation xml:lang="en">Associated unit</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="unitName" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Genauere Bezeichnung der Einheit, wenn im Feld «unit» die Einheit «pc» (Stück) angegeben wurde.</xs:documentation>
+					<xs:documentation xml:lang="fr">Désignation plus précise de l'unité, si l'unité "pc" (pièce) a été indiquée dans le champ "unit".</xs:documentation>
+					<xs:documentation xml:lang="en">More precise designation of the unit if the unit "pc" (piece) was specified in the "unit" field.</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:token">
+						<xs:maxLength value="50"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="veracityType">
+		<xs:annotation>
+			<xs:documentation xml:lang="de">Wahrheitswert</xs:documentation>
+			<xs:documentation xml:lang="fr">Valeur de vérité</xs:documentation>
+			<xs:documentation xml:lang="en">Truth value</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:token">
+			<xs:enumeration value="TRUE">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Wahr</xs:documentation>
+					<xs:documentation xml:lang="fr">Vrai</xs:documentation>
+					<xs:documentation xml:lang="it">Vero</xs:documentation>
+					<xs:documentation xml:lang="en">True</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="FALSE">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Falsch</xs:documentation>
+					<xs:documentation xml:lang="fr">Faux</xs:documentation>
+					<xs:documentation xml:lang="it">Sbagliato</xs:documentation>
+					<xs:documentation xml:lang="en">False</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="NA">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Nicht anwendbar</xs:documentation>
+					<xs:documentation xml:lang="fr">Non applicable</xs:documentation>
+					<xs:documentation xml:lang="it">Non applicabile</xs:documentation>
+					<xs:documentation xml:lang="en">Not applicable</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="UNDEFINED">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Undefiniert</xs:documentation>
+					<xs:documentation xml:lang="fr">Non défini</xs:documentation>
+					<xs:documentation xml:lang="it">Non definito</xs:documentation>
+					<xs:documentation xml:lang="en">Undefined</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="validityType">
+		<xs:annotation>
+			<xs:documentation xml:lang="de">Dieses Element beschreibt Angaben zur Gültigkeit.</xs:documentation>
+			<xs:documentation xml:lang="fr">Cet élément décrit des informations sur la validité.</xs:documentation>
+			<xs:documentation xml:lang="en">This element describes information on validity.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="validFromInclusive" type="xs:date">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Anfangsdatum der Gültigkeit.</xs:documentation>
+					<xs:documentation xml:lang="fr">Date de début de validité.</xs:documentation>
+					<xs:documentation xml:lang="en">Start date of validity.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="validToExclusive" type="xs:date" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Enddatum der Gültigkeit (exklusiv). </xs:documentation>
+					<xs:documentation xml:lang="fr">Date de fin de validité (exclusive). </xs:documentation>
+					<xs:documentation xml:lang="en">End date of validity (exclusive). </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="supersedesId" type="eCH-0261:identifierType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">ID des Objektes, welches mit dem aktuellen Objekt ersetzt wird.</xs:documentation>
+					<xs:documentation xml:lang="fr">ID de l'objet qui sera remplacé par l'objet actuel.</xs:documentation>
+					<xs:documentation xml:lang="en">ID of the object that is replaced with the current object.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="supersededById" type="eCH-0261:identifierType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">ID des Objekts, welches das aktuelle Ob-jekt ersetzt.</xs:documentation>
+					<xs:documentation xml:lang="fr">ID de l'objet qui remplace l'objet actuel.</xs:documentation>
+					<xs:documentation xml:lang="en">ID of the object that replaces the current object.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
 	<xs:complexType name="enumeratedItemType">
 		<xs:annotation>
 			<xs:documentation xml:lang="de">Dieses Element ist für Listen beabsichtigt, die Identifikatoren und Deskriptoren beinhalten. Solche Listen können statischer oder dynamischer Natur sein.</xs:documentation>
 			<xs:documentation xml:lang="fr">Cet élément est destiné aux listes contenant des identifiants et des descriptions. Ces listes peuvent être statiques ou dynamiques.</xs:documentation>
-			<xs:documentation xml:lang="en">This element is useful for lists that encompass ids and descriptors only,
-                and which are potentially duration-based. Such lists can either be static or dynamic in nature.
-            </xs:documentation>
+			<xs:documentation xml:lang="en">This element is useful for lists that encompass ids and descriptors only, and which are potentially duration-based. Such lists can either be static or dynamic in nature.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="code">
 				<xs:annotation>
-					<xs:documentation xml:lang="de">Code (dieser muss nur innerhalb der Liste einddeutig sein).
-                    </xs:documentation>
-					<xs:documentation xml:lang="fr">Code (celui-ci doit être univoque uniquement à l'intérieur de la liste).
-                    </xs:documentation>
-					<xs:documentation xml:lang="en">An identifier. This must be unique within this list only.
-                    </xs:documentation>
+					<xs:documentation xml:lang="de">Code (dieser muss nur innerhalb der Liste einddeutig sein).</xs:documentation>
+					<xs:documentation xml:lang="fr">Code (celui-ci doit être univoque uniquement à l'intérieur de la liste).</xs:documentation>
+					<xs:documentation xml:lang="en">An identifier. This must be unique within this list only.</xs:documentation>
 				</xs:annotation>
 				<xs:simpleType>
 					<xs:restriction base="xs:token">
@@ -684,22 +778,11 @@ Datum				Version				Autor
 					<xs:documentation xml:lang="en">Descriptor (multilingual)</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="validFromInclusive" type="xs:date" minOccurs="0">
+			<xs:element name="validity" minOccurs="0" type="eCH-0261:validityType">
 				<xs:annotation>
-					<xs:documentation xml:lang="de">Anfangsdatum der Gültigkeit. Ermöglicht die Bestimmung, dass der jeweilige Eintrag ab einem bestimmten Datum verwendet werden darf.</xs:documentation>
-					<xs:documentation xml:lang="fr">La date de début de cette définition, y compris. Cela permet d'annuler une définition ou de la retirer de la circulation à partir d'une certaine date.</xs:documentation>
-					<xs:documentation xml:lang="en">The begin date of this definition, inclusive. This allows a definition to be entered into circulation as of a specific date.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="validToInclusive" type="xs:date" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation xml:lang="de">Enddatum der Gültigkeit. Ermöglicht das Ausserkraftsetzen eines
-                        Eintrags. Falls ein Eintrag aus dem Verkehr genommen werden soll oder falls eine Mutation
-                        vorgenommen wurde, kann er mit dem Datum, bis zu welchem er gültig war, versehen werden. Die
-                        Liste bleibt so rückwärtskompatibel.
-                    </xs:documentation>
-					<xs:documentation xml:lang="fr">La date de fin de cette définition, inclusivement. Cela permet à une définition d'être retirée de la circulation active sans affecter l'usage précédent.</xs:documentation>
-					<xs:documentation xml:lang="en">The end date of this definition, inclusive. This allows a definition to be removed from active circulation without affecting previous usage.</xs:documentation>
+					<xs:documentation xml:lang="de">Informationen zur Gültigkeit (Anfangs- und Enddatum der Gültigkeit).</xs:documentation>
+					<xs:documentation xml:lang="fr">Informations sur la validité (date de début et de fin de validité).</xs:documentation>
+					<xs:documentation xml:lang="en">Information on validity (start and end date of validity).</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
@@ -764,17 +847,9 @@ Datum				Version				Autor
 	</xs:simpleType>
 	<xs:simpleType name="farmTypeType">
 		<xs:annotation>
-			<xs:documentation xml:lang="de">Die Kantone erkennen die landwirtschaftlichen Betriebe unter
-                Berücksichtigung der in der Verordnung über landwirtschaftliche Begriffe und die Anerkennung von
-                Betriebsformen festgelegten Kriterien an.
-            </xs:documentation>
-			<xs:documentation xml:lang="fr">Les cantons reconnaissent les exploitations agricoles en tenant compte des
-                critères définis dans l'ordonnance sur la terminologie agricole et la reconnaissance des formes
-                d'exploitation.
-            </xs:documentation>
-			<xs:documentation xml:lang="en">The cantons recognise agricultural holdings in accordance with the criteria
-                defined in the Ordinance on Agricultural Terminology and the recognition of farm types
-            </xs:documentation>
+			<xs:documentation xml:lang="de">Die Kantone erkennen die landwirtschaftlichen Betriebe unter Berücksichtigung der in der Verordnung über landwirtschaftliche Begriffe und die Anerkennung von Betriebsformen festgelegten Kriterien an.</xs:documentation>
+			<xs:documentation xml:lang="fr">Les cantons reconnaissent les exploitations agricoles en tenant compte des critères définis dans l'ordonnance sur la terminologie agricole et la reconnaissance des formes d'exploitation.</xs:documentation>
+			<xs:documentation xml:lang="en">The cantons recognise agricultural holdings in accordance with the criteria defined in the Ordinance on Agricultural Terminology and the recognition of farm types.</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:int">
 			<xs:enumeration value="01">
@@ -909,87 +984,81 @@ Datum				Version				Autor
 	</xs:simpleType>
 	<xs:simpleType name="agriculturalZoneType">
 		<xs:annotation>
-			<xs:documentation xml:lang="de">Durch die Unterteilung der landwirtschaftlichen Flächen in Zonen können die
-                schwierigen Produktionsbedingungen berücksichtigt werden.
-            </xs:documentation>
-			<xs:documentation xml:lang="fr">La subdivision des surfaces agricoles en zones permet de prendre en compte
-                la difficulté des conditions de production.
-            </xs:documentation>
-			<xs:documentation xml:lang="en">A subdivision of agricultural areas into zones reflecting production
-                conditions based on arduousness.
-            </xs:documentation>
+			<xs:documentation xml:lang="de">Durch die Unterteilung der landwirtschaftlichen Flächen in Zonen können die schwierigen Produktionsbedingungen berücksichtigt werden.</xs:documentation>
+			<xs:documentation xml:lang="fr">La subdivision des surfaces agricoles en zones permet de prendre en compte la difficulté des conditions de production.</xs:documentation>
+			<xs:documentation xml:lang="en">A subdivision of agricultural areas into zones reflecting production conditions based on arduousness.</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:int">
 			<xs:enumeration value="31">
 				<xs:annotation>
-					<xs:documentation xml:lang="de">Ganzjahresbetrieb</xs:documentation>
-					<xs:documentation xml:lang="fr">Exploitation à l'année</xs:documentation>
-					<xs:documentation xml:lang="it">Azienda gestita tutto l'anno</xs:documentation>
-					<xs:documentation xml:lang="en">Farm all-the-year</xs:documentation>
+					<xs:documentation xml:lang="de">Talzone</xs:documentation>
+					<xs:documentation xml:lang="fr">Zone de plaine</xs:documentation>
+					<xs:documentation xml:lang="it">Zone di pianura</xs:documentation>
+					<xs:documentation xml:lang="en">Plains zone</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="41">
 				<xs:annotation>
-					<xs:documentation xml:lang="de">Produktionsstätte</xs:documentation>
-					<xs:documentation xml:lang="fr">Unité de production</xs:documentation>
-					<xs:documentation xml:lang="it">Unità di produzione</xs:documentation>
-					<xs:documentation xml:lang="en">Production facility</xs:documentation>
+					<xs:documentation xml:lang="de">Hügelzone</xs:documentation>
+					<xs:documentation xml:lang="fr">Zone des collines</xs:documentation>
+					<xs:documentation xml:lang="it">Zona collinare</xs:documentation>
+					<xs:documentation xml:lang="en">Hills zone</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="51">
 				<xs:annotation>
-					<xs:documentation xml:lang="de">Hirtenbetrieb</xs:documentation>
-					<xs:documentation xml:lang="fr">Exploitation de pâturage</xs:documentation>
-					<xs:documentation xml:lang="it">Azienda pastorizia</xs:documentation>
-					<xs:documentation xml:lang="en">Sheperd</xs:documentation>
+					<xs:documentation xml:lang="de">Bergzone 1</xs:documentation>
+					<xs:documentation xml:lang="fr">Zone de montagne 1</xs:documentation>
+					<xs:documentation xml:lang="it">Zona di montagna 1</xs:documentation>
+					<xs:documentation xml:lang="en">Mountain zone 1</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="52">
 				<xs:annotation>
-					<xs:documentation xml:lang="de">Gemeinschaftsweidebetrieb</xs:documentation>
-					<xs:documentation xml:lang="fr">Exploitation de pâturage communautaire</xs:documentation>
-					<xs:documentation xml:lang="it">Azienda con pascoli comunitari</xs:documentation>
-					<xs:documentation xml:lang="en">Grazing community</xs:documentation>
+					<xs:documentation xml:lang="de">Bergzone 2</xs:documentation>
+					<xs:documentation xml:lang="fr">Zone de montagne 2</xs:documentation>
+					<xs:documentation xml:lang="it">Zona di montagna 2</xs:documentation>
+					<xs:documentation xml:lang="en">Mountain zone 2</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="53">
 				<xs:annotation>
-					<xs:documentation xml:lang="de">Sömmerungsbetrieb</xs:documentation>
-					<xs:documentation xml:lang="fr">Exploitation d'estivage</xs:documentation>
-					<xs:documentation xml:lang="it">Azienda d'estivazione</xs:documentation>
-					<xs:documentation xml:lang="en">Summering</xs:documentation>
+					<xs:documentation xml:lang="de">Bergzone 3</xs:documentation>
+					<xs:documentation xml:lang="fr">Zone de montagne 3</xs:documentation>
+					<xs:documentation xml:lang="it">Zona di montagna 3</xs:documentation>
+					<xs:documentation xml:lang="en">Mountain zone 3</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="54">
 				<xs:annotation>
-					<xs:documentation xml:lang="de">Betriebsgemeinschaft</xs:documentation>
-					<xs:documentation xml:lang="fr">Communauté d'exploitation</xs:documentation>
-					<xs:documentation xml:lang="it">Comunità aziendale</xs:documentation>
-					<xs:documentation xml:lang="en">Group farming</xs:documentation>
+					<xs:documentation xml:lang="de">Bergzone 4</xs:documentation>
+					<xs:documentation xml:lang="fr">Zone de montagne 4</xs:documentation>
+					<xs:documentation xml:lang="it">Zona di montagna 4</xs:documentation>
+					<xs:documentation xml:lang="en">Mountain zone 4</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="61">
 				<xs:annotation>
-					<xs:documentation xml:lang="de">Bestand</xs:documentation>
-					<xs:documentation xml:lang="fr">Troupeau</xs:documentation>
-					<xs:documentation xml:lang="it">Effettivo</xs:documentation>
-					<xs:documentation xml:lang="en">Herd</xs:documentation>
+					<xs:documentation xml:lang="de">Sömmerungsgebiet</xs:documentation>
+					<xs:documentation xml:lang="fr">Région d'estivage</xs:documentation>
+					<xs:documentation xml:lang="it">Regione d'estivazione</xs:documentation>
+					<xs:documentation xml:lang="en">Summering zone</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="77">
 				<xs:annotation>
-					<xs:documentation xml:lang="de">Viehhandelsunternehmen</xs:documentation>
-					<xs:documentation xml:lang="fr">Exploitation de marchand de bétail</xs:documentation>
-					<xs:documentation xml:lang="it">Azienda che commercia bestiame</xs:documentation>
-					<xs:documentation xml:lang="en">Cattle trade</xs:documentation>
+					<xs:documentation xml:lang="de">Angestammte Flächen im Ausland (nur für Sömmerungsbetriebe)</xs:documentation>
+					<xs:documentation xml:lang="fr">Surfaces exploitées par tradition dans la zone limitrophe étrangère (seulement pour les exploitations d'estivage)</xs:documentation>
+					<xs:documentation xml:lang="it">Superfici nella zona limitrofa coltivate per tradizione (solo por aziende d'estivazione)</xs:documentation>
+					<xs:documentation xml:lang="en">Surfaces traditionally exploited in the foreign border zone (only for summering farms)</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="79">
 				<xs:annotation>
-					<xs:documentation xml:lang="de">Wanderherde</xs:documentation>
-					<xs:documentation xml:lang="fr">Troupeau en transhumance</xs:documentation>
-					<xs:documentation xml:lang="it">Mandria transumante</xs:documentation>
-					<xs:documentation xml:lang="en">Transhumance</xs:documentation>
+					<xs:documentation xml:lang="de">Nicht angestammte Flächen im Ausland (nur für Sömmerungsbetriebe)</xs:documentation>
+					<xs:documentation xml:lang="fr">Surfaces dans la zone limitrophe étrangère qui ne sont pas exploitées par tradition (seulement pour les exploitations d'estivage)</xs:documentation>
+					<xs:documentation xml:lang="it">Superfici nella zona limitrofa non coltivate per tradizione (solo por aziende d'estivazione)</xs:documentation>
+					<xs:documentation xml:lang="en">Zone in the foreign border area that are not traditionally exploited (only for summering farms)</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
