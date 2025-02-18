@@ -543,6 +543,14 @@
 					<xs:documentation xml:lang="en">kilogram/cubic metre</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
+			<xs:enumeration value="kg/kg">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Kilogramm/Kilogramm</xs:documentation>
+					<xs:documentation xml:lang="fr">kilogramme/kilogramme</xs:documentation>
+					<xs:documentation xml:lang="it">chilogrammo/chilogrammo</xs:documentation>
+					<xs:documentation xml:lang="en">kilogram/kilogram</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
 			<xs:enumeration value="kg/pc">
 				<xs:annotation>
 					<xs:documentation xml:lang="de">Kilogramm/Stück</xs:documentation>
