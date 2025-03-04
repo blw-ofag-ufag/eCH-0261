@@ -1072,7 +1072,7 @@
 			<xs:documentation xml:lang="en">Types of region in accordance with the Agricultural Zone Ordinance.</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:int">
-			<xs:enumeration value="01">
+			<xs:enumeration value="10">
 				<xs:annotation>
 					<xs:documentation xml:lang="de">Berggebiet</xs:documentation>
 					<xs:documentation xml:lang="fr">Région de montagne</xs:documentation>
@@ -1080,12 +1080,20 @@
 					<xs:documentation xml:lang="en">Mountain region</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="02">
+			<xs:enumeration value="20">
 				<xs:annotation>
 					<xs:documentation xml:lang="de">Talgebiet</xs:documentation>
 					<xs:documentation xml:lang="fr">Région de plaine</xs:documentation>
 					<xs:documentation xml:lang="it">Regione di pianura</xs:documentation>
 					<xs:documentation xml:lang="en">Valley region</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="30">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Berg- und Hügelgebiet</xs:documentation>
+					<xs:documentation xml:lang="fr">Région de montagne et des collines</xs:documentation>
+					<xs:documentation xml:lang="it">Regione di montagna e collinare</xs:documentation>
+					<xs:documentation xml:lang="en">Mountain and hills region</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
