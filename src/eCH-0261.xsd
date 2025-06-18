@@ -897,7 +897,7 @@
 			<xs:enumeration value="09">
 				<xs:annotation>
 					<xs:documentation xml:lang="de">Viehhandelsunternehmen</xs:documentation>
-					<xs:documentation xml:lang="fr">Exploitation de marchand de bétail</xs:documentation>
+					<xs:documentation xml:lang="fr">Entreprise de marchand de bétail</xs:documentation>
 					<xs:documentation xml:lang="it">Azienda che commercia bestiame</xs:documentation>
 					<xs:documentation xml:lang="en">Cattle trade</xs:documentation>
 				</xs:annotation>
