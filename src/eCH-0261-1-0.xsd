@@ -12,10 +12,11 @@
 	<xs:import namespace="http://www.ech.ch/xmlns/eCH-0046/6" schemaLocation="http://www.ech.ch/xmlns/eCH-0046/6/eCH-0046-6-0.xsd"/>
 	<xs:import namespace="http://www.ech.ch/xmlns/eCH-0108/7" schemaLocation="http://www.ech.ch/xmlns/eCH-0108/7/eCH-0108-7-0.xsd"/>
 	<!--Hauptdatentypen-->
-	<xs:complexType name="legalUnitType">
+	<xs:complexType name="legalUnitAgriculturalDataType">
 		<xs:annotation>
-			<xs:documentation xml:lang="de">Rechtliche Einheit</xs:documentation>
-			<xs:documentation xml:lang="en">Legal Unit</xs:documentation>
+			<xs:documentation xml:lang="de">Agrarspezifische Merkmale der rechtlichen Einheit, inklusiv Stammdaten aus eCH-0108</xs:documentation>
+			<xs:documentation xml:lang="fr">Caractéristiques spécifiques agricoles de l'unité légale, y compris les données de base de eCH-0108</xs:documentation>
+			<xs:documentation xml:lang="en">Specific agricultural characteristics of the legal unit, included the master data from eCH-0108</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="legalUnitMasterData" type="eCH-0108:legalUnitMasterDataType">
@@ -25,22 +26,6 @@
 					<xs:documentation xml:lang="en">Master data of the legal unit</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="agriculturalAdditionToLegalUnit" type="eCH-0261:agriculturalAdditionToLegalUnitType">
-				<xs:annotation>
-					<xs:documentation xml:lang="de">Agrarspezifische Merkmale der rechtlichen Einheit</xs:documentation>
-					<xs:documentation xml:lang="fr">Caractéristiques spécifiques agricoles de l'unité légale</xs:documentation>
-					<xs:documentation xml:lang="en">Specific agricultural characteristics of the legal unit</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-		</xs:sequence>
-	</xs:complexType>
-	<xs:complexType name="agriculturalAdditionToLegalUnitType">
-		<xs:annotation>
-			<xs:documentation xml:lang="de">Agrarspezifische Merkmale der rechtlichen Einheit</xs:documentation>
-			<xs:documentation xml:lang="fr">Caractéristiques spécifiques agricoles de l'unité légale</xs:documentation>
-			<xs:documentation xml:lang="en">Specific agricultural characteristics of the legal unit</xs:documentation>
-		</xs:annotation>
-		<xs:sequence>
 			<xs:element name="parentLegalUnit" type="eCH-0108:uidType" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation xml:lang="de">Übergeordnete rechtliche Einheit. Es ist möglich, dass es mehrere übergeordnete rechtliche Einheiten gibt. Dies kann z.B. bei Betriebszweiggemeinschaften und ÖLN-Gemeinschaft der Fall sein.</xs:documentation>
