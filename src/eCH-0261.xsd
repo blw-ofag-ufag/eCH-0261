@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:eCH-0261="http://www.ech.ch/xmlns/eCH-0261/1" xmlns:eCH-0007="http://www.ech.ch/xmlns/eCH-0007/6" xmlns:eCH-0008="http://www.ech.ch/xmlns/eCH-0008/3" xmlns:eCH-0010="http://www.ech.ch/xmlns/eCH-0010/8" xmlns:eCH-0011="http://www.ech.ch/xmlns/eCH-0011/9" xmlns:eCH-0044="http://www.ech.ch/xmlns/eCH-0044/4" xmlns:eCH-0046="http://www.ech.ch/xmlns/eCH-0046/6" xmlns:eCH-0108="http://www.ech.ch/xmlns/eCH-0108/7" targetNamespace="http://www.ech.ch/xmlns/eCH-0261/1" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:eCH-0261="http://www.ech.ch/xmlns/eCH-0261/1" xmlns:eCH-0007="http://www.ech.ch/xmlns/eCH-0007/6" xmlns:eCH-0008="http://www.ech.ch/xmlns/eCH-0008/3" xmlns:eCH-0010="http://www.ech.ch/xmlns/eCH-0010/8" xmlns:eCH-0011="http://www.ech.ch/xmlns/eCH-0011/9" xmlns:eCH-0044="http://www.ech.ch/xmlns/eCH-0044/4" xmlns:eCH-0046="http://www.ech.ch/xmlns/eCH-0046/6" xmlns:eCH-0108="http://www.ech.ch/xmlns/eCH-0108/7" targetNamespace="http://www.ech.ch/xmlns/eCH-0261/1" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.1.0">
 	<xs:annotation>
 		<xs:documentation xml:lang="de">Agrardaten - Betriebs- und Unternehmensstammdaten</xs:documentation>
 		<xs:documentation xml:lang="en">Agricultural data - Site and Enterprise Master Data</xs:documentation>
@@ -543,6 +543,14 @@
 					<xs:documentation xml:lang="en">kilogram/cubic metre</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
+			<xs:enumeration value="kg/kg">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Kilogramm/Kilogramm</xs:documentation>
+					<xs:documentation xml:lang="fr">kilogramme/kilogramme</xs:documentation>
+					<xs:documentation xml:lang="it">chilogrammo/chilogrammo</xs:documentation>
+					<xs:documentation xml:lang="en">kilogram/kilogram</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
 			<xs:enumeration value="kg/pc">
 				<xs:annotation>
 					<xs:documentation xml:lang="de">Kilogramm/Stück</xs:documentation>
@@ -889,7 +897,7 @@
 			<xs:enumeration value="09">
 				<xs:annotation>
 					<xs:documentation xml:lang="de">Viehhandelsunternehmen</xs:documentation>
-					<xs:documentation xml:lang="fr">Exploitation de marchand de bétail</xs:documentation>
+					<xs:documentation xml:lang="fr">Entreprise de marchand de bétail</xs:documentation>
 					<xs:documentation xml:lang="it">Azienda che commercia bestiame</xs:documentation>
 					<xs:documentation xml:lang="en">Cattle trade</xs:documentation>
 				</xs:annotation>
@@ -1053,6 +1061,39 @@
 					<xs:documentation xml:lang="fr">Surfaces dans la zone limitrophe étrangère qui ne sont pas exploitées par tradition (seulement pour les exploitations d'estivage)</xs:documentation>
 					<xs:documentation xml:lang="it">Superfici nella zona limitrofa non coltivate per tradizione (solo por aziende d'estivazione)</xs:documentation>
 					<xs:documentation xml:lang="en">Zone in the foreign border area that are not traditionally exploited (only for summering farms)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="agriculturalRegionType">
+		<xs:annotation>
+			<xs:documentation xml:lang="de">Gebietstypen gemäss der Landwirtschaftliche Zonen-Verordnung.</xs:documentation>
+			<xs:documentation xml:lang="fr">Types des régions selon l'ordonnance sur les zones agricoles.</xs:documentation>
+			<xs:documentation xml:lang="en">Types of region in accordance with the Agricultural Zone Ordinance.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:int">
+			<xs:enumeration value="10">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Berggebiet</xs:documentation>
+					<xs:documentation xml:lang="fr">Région de montagne</xs:documentation>
+					<xs:documentation xml:lang="it">Regione di montagna</xs:documentation>
+					<xs:documentation xml:lang="en">Mountain region</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="20">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Talgebiet</xs:documentation>
+					<xs:documentation xml:lang="fr">Région de plaine</xs:documentation>
+					<xs:documentation xml:lang="it">Regione di pianura</xs:documentation>
+					<xs:documentation xml:lang="en">Valley region</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="30">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Berg- und Hügelgebiet</xs:documentation>
+					<xs:documentation xml:lang="fr">Région de montagne et des collines</xs:documentation>
+					<xs:documentation xml:lang="it">Regione di montagna e collinare</xs:documentation>
+					<xs:documentation xml:lang="en">Mountain and hills region</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
