@@ -27,7 +27,8 @@ ech-0261:Ontology a sh:NodeShape ;
 		"Lars Steffen",
 		"Ryan Studer",
 		"Manfred Tschumi" ;
-    rdfs:label "Betriebs- und Unternehmensstammdaten"@de ;
+    dcterms:title "Betriebs- und Unternehmensstammdaten"@de ;
+	dcterms:abstract "Der vorliegende Standard definiert das Datenformat für die im Agrardatenumfeld verwendeten Betriebs- und Unternehmensstammdaten. Der Standard wurde von der Arbeitsgruppe «Betriebs- und Unternehmensstammdaten» in Zusammenarbeit mit dem Bundesamt für Landwirtschaft erarbeitet."@de ;
 	owl:versionInfo "1.1.0" .
 
 # ---------------------------------------------------------------------------
