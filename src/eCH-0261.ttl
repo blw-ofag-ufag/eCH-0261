@@ -1,0 +1,410 @@
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ech-0261: <http://www.ech.ch/xmlns/eCH-0261/1#> .
+@prefix ech-0007: <http://www.ech.ch/xmlns/eCH-0007/6#> .
+@prefix ech-0008: <http://www.ech.ch/xmlns/eCH-0008/3#> .
+@prefix ech-0010: <http://www.ech.ch/xmlns/eCH-0010/8#> .
+@prefix ech-0011: <http://www.ech.ch/xmlns/eCH-0011/9#> .
+@prefix ech-0044: <http://www.ech.ch/xmlns/eCH-0044/4#> .
+@prefix ech-0046: <http://www.ech.ch/xmlns/eCH-0046/6#> .
+@prefix ech-0108: <http://www.ech.ch/xmlns/eCH-0108/7#> .
+
+# ---------------------------------------------------------------------------
+# Metadata
+# ---------------------------------------------------------------------------
+
+ech-0261:Ontology a sh:NodeShape ;
+    dcterms:creator "Gérald Ahles",
+		"Martin Brugger",
+		"Steven Gertiser",
+		"Simon Hasler",
+		"Wilfred Loosli",
+		"Markus Müller Egli",
+		"Domenic Schneider",
+		"Lars Steffen",
+		"Ryan Studer",
+		"Manfred Tschumi" ;
+    rdfs:label "Betriebs- und Unternehmensstammdaten"@de ;
+	owl:versionInfo "1.1.0" .
+
+# ---------------------------------------------------------------------------
+# Simple Types (Enumerations and Restrictions)
+# ---------------------------------------------------------------------------
+
+ech-0261:UnitTypeShape a sh:NodeShape ;
+    sh:datatype xsd:string ;
+    sh:in ( "kg" "m3" "pc" "°C" "J" "S" "S/m" "%" "kg/m3" "kg/kg" "kg/pc" "m" "m2" "kg/m2" "m3/m2" "m3/kg" "pc/m2" "IU" "IU/kg" "mol" "n/a" ) .
+
+ech-0261:VeracityTypeShape a sh:NodeShape ;
+    sh:datatype xsd:string ;
+    sh:in ( "TRUE" "FALSE" "NA" "UNDEFINED" ) .
+
+ech-0261:LegalUnitStatusTypeShape a sh:NodeShape ;
+    sh:datatype xsd:integer ;
+    sh:in ( 1 3 ) .
+
+ech-0261:LocalUnitStatusTypeShape a sh:NodeShape ;
+    sh:datatype xsd:integer ;
+    sh:in ( 1 3 6 ) .
+
+ech-0261:FarmTypeTypeShape a sh:NodeShape ;
+    sh:datatype xsd:integer ;
+    sh:in ( 1 2 4 5 6 9 10 11 12 13 14 15 16 17 20 99 ) . # Note: Leading zeros removed for xsd:integer
+
+ech-0261:AgriculturalZoneTypeShape a sh:NodeShape ;
+    sh:datatype xsd:integer ;
+    sh:in ( 31 41 51 52 53 54 61 77 79 ) .
+
+ech-0261:AgriculturalRegionTypeShape a sh:NodeShape ;
+    sh:datatype xsd:integer ;
+    sh:in ( 10 20 30 ) .
+
+# ---------------------------------------------------------------------------
+# Complex Types (Node Shapes)
+# ---------------------------------------------------------------------------
+
+ech-0261:LegalUnitShape a sh:NodeShape ;
+    sh:targetClass ech-0261:LegalUnit ;
+    sh:description "Rechtliche Einheit"@de , "Legal Unit"@en ;
+    sh:property [
+        sh:path ech-0261:legalUnitMasterData ;
+        sh:node ech-0108:LegalUnitMasterDataTypeShape ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:name "Stammdaten der rechtlichen Einheit"@de ;
+    ] ;
+    sh:property [
+        sh:path ech-0261:agriculturalAdditionToLegalUnit ;
+        sh:node ech-0261:AgriculturalAdditionToLegalUnitShape ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:name "Agrarspezifische Merkmale der rechtlichen Einheit"@de ;
+    ] .
+
+ech-0261:AgriculturalAdditionToLegalUnitShape a sh:NodeShape ;
+    sh:targetClass ech-0261:AgriculturalAdditionToLegalUnit ;
+    sh:property [
+        sh:path ech-0261:parentLegalUnit ;
+        sh:node ech-0108:UidTypeShape ;
+        sh:name "Übergeordnete rechtliche Einheit"@de ;
+    ] ;
+    sh:property [
+        sh:path ech-0261:personWithFunction ;
+        sh:node ech-0261:PersonWithFunctionShape ;
+        sh:name "Person/PersonenFunktionen"@de ;
+    ] ;
+    sh:property [
+        sh:path ech-0261:lastMutation ;
+        sh:datatype xsd:dateTime ;
+        sh:maxCount 1 ;
+    ] .
+
+ech-0261:LocalUnitShape a sh:NodeShape ;
+    sh:targetClass ech-0261:LocalUnit ;
+    sh:description "Örtliche Einheit"@de , "Local Unit"@en ;
+    sh:property [
+        sh:path ech-0261:localUnitMasterData ;
+        sh:node ech-0108:LocalUnitMasterDataTypeShape ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+    ] ;
+    sh:property [
+        sh:path ech-0261:agriculturalAdditionToLocalUnit ;
+        sh:node ech-0261:AgriculturalAdditionToLocalUnitShape ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+    ] .
+
+ech-0261:AgriculturalAdditionToLocalUnitShape a sh:NodeShape ;
+    sh:targetClass ech-0261:AgriculturalAdditionToLocalUnit ;
+    sh:property [
+        sh:path ech-0261:parentLocalId ;
+        sh:node ech-0108:LocalIdTypeShape ;
+    ] ;
+    sh:property [
+        sh:path ech-0261:farmType ;
+        sh:node ech-0261:FarmTypeTypeShape ;
+        sh:maxCount 1 ;
+    ] ;
+    sh:property [
+        sh:path ech-0261:inspectionOrganisation ;
+        sh:node ech-0108:UidTypeShape ;
+    ] ;
+    sh:property [
+        sh:path ech-0261:nprCertified ;
+        sh:node ech-0261:VeracityTypeShape ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+    ] ;
+    sh:property [
+        sh:path ech-0261:agriculturalZone ;
+        sh:node ech-0261:AgriculturalZoneTypeShape ;
+        sh:maxCount 1 ;
+    ] ;
+    sh:property [
+        sh:path ech-0261:agriculturalOversightAuthority ;
+        sh:node ech-0261:AgriculturalOversightAuthorityShape ;
+        sh:maxCount 1 ;
+    ] ;
+    sh:property [
+        sh:path ech-0261:personWithFunction ;
+        sh:node ech-0261:PersonWithFunctionShape ;
+    ] ;
+    sh:property [
+        sh:path ech-0261:lastMutation ;
+        sh:datatype xsd:dateTime ;
+        sh:maxCount 1 ;
+    ] .
+
+ech-0261:AgriculturalOversightAuthorityShape a sh:NodeShape ;
+    sh:targetClass ech-0261:AgriculturalOversightAuthority ;
+    sh:xone (
+        [ sh:property [ sh:path ech-0261:cantonalAuthority ; sh:node ech-0007:CantonAbbreviationTypeShape ; sh:minCount 1 ; sh:maxCount 1 ] ]
+        [ sh:property [ sh:path ech-0261:stateAuthority ; sh:datatype xsd:string ; sh:in ( "LI" ) ; sh:minCount 1 ; sh:maxCount 1 ] ]
+    ) .
+
+ech-0261:PersonIdentifierShape a sh:NodeShape ;
+    sh:targetClass ech-0261:PersonIdentifier ;
+    sh:xone (
+        [ sh:property [ sh:path ech-0261:vn ; sh:node ech-0044:VnTypeShape ; sh:minCount 1 ; sh:maxCount 1 ] ]
+        [ sh:property [ sh:path ech-0261:eiam ; sh:datatype xsd:string ; sh:maxLength 36 ; sh:minCount 1 ; sh:maxCount 1 ] ]
+        [ sh:property [ sh:path ech-0261:uuid ; sh:datatype xsd:string ; sh:maxLength 36 ; sh:minCount 1 ; sh:maxCount 1 ] ]
+        [ sh:property [ sh:path ech-0261:email ; sh:node ech-0046:EmailAddressTypeShape ; sh:minCount 1 ; sh:maxCount 1 ] ]
+    ) .
+
+ech-0261:PersonShape a sh:NodeShape ;
+    sh:targetClass ech-0261:Person ;
+    sh:property [
+        sh:path ech-0261:personIdentifier ;
+        sh:node ech-0261:PersonIdentifierShape ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+    ] ;
+    sh:property [
+        sh:path ech-0261:title ;
+        sh:node ech-0010:TitleTypeShape ;
+        sh:maxCount 1 ;
+    ] ;
+    sh:property [
+        sh:path ech-0261:firstName ;
+        sh:node ech-0010:FirstNameTypeShape ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+    ] ;
+    sh:property [
+        sh:path ech-0261:callName ;
+        sh:node ech-0010:FirstNameTypeShape ;
+        sh:maxCount 1 ;
+    ] ;
+    sh:property [
+        sh:path ech-0261:lastName ;
+        sh:node ech-0010:LastNameTypeShape ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+    ] ;
+    sh:property [
+        sh:path ech-0261:preferredCorrespondenceLanguage ;
+        sh:node ech-0011:LanguageTypeShape ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+    ] ;
+    sh:property [
+        sh:path ech-0261:phone ;
+        sh:node ech-0046:PhoneNumberTypeShape ;
+    ] ;
+    sh:property [
+        sh:path ech-0261:email ;
+        sh:node ech-0046:EmailAddressTypeShape ;
+    ] ;
+    sh:property [
+        sh:path ech-0261:dateOfBirth ;
+        sh:node ech-0044:DatePartiallyKnownTypeShape ;
+        sh:maxCount 1 ;
+    ] ;
+    sh:property [
+        sh:path ech-0261:addressForCorrespondence ;
+        sh:node ech-0010:AddressInformationTypeShape ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+    ] ;
+    sh:property [
+        sh:path ech-0261:validFromInclusive ;
+        sh:datatype xsd:date ;
+        sh:maxCount 1 ;
+    ] .
+
+ech-0261:PersonWithFunctionShape a sh:NodeShape ;
+    sh:targetClass ech-0261:PersonWithFunction ;
+    sh:property [
+        sh:path ech-0261:personIdentifier ;
+        sh:node ech-0261:PersonIdentifierShape ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+    ] ;
+    sh:property [
+        sh:path ech-0261:personFunction ;
+        sh:datatype xsd:string ;
+        sh:pattern "^[0-9]{1,50}$" ;
+        sh:maxLength 50 ;
+        sh:minCount 1 ;
+    ] .
+
+ech-0261:PersonFunctionShape a sh:NodeShape ;
+    sh:targetClass ech-0261:PersonFunction ;
+    sh:property [
+        sh:path ech-0261:personFunctionCode ;
+        sh:datatype xsd:string ;
+        sh:pattern "^[0-9]{1,50}$" ;
+        sh:maxLength 50 ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+    ] ;
+    sh:property [
+        sh:path ech-0261:descriptor ;
+        sh:node ech-0261:DescriptorShape ;
+        sh:maxCount 1 ;
+    ] ;
+    sh:property [
+        sh:path ech-0261:freeformDesignation ;
+        sh:datatype xsd:string ;
+        sh:maxLength 255 ;
+        sh:maxCount 1 ;
+    ] .
+
+ech-0261:IdentifierShape a sh:NodeShape ;
+    sh:targetClass ech-0261:Identifier ;
+    sh:property [
+        sh:path ech-0261:id ;
+        sh:datatype xsd:string ;
+        sh:maxLength 50 ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+    ] ;
+    sh:property [
+        sh:path ech-0261:sourceSystemId ;
+        sh:datatype xsd:string ;
+        sh:maxLength 50 ;
+        sh:maxCount 1 ;
+    ] .
+
+ech-0261:DescriptorShape a sh:NodeShape ;
+    sh:targetClass ech-0261:Descriptor ;
+    sh:property [
+        sh:path ech-0261:designationDeu ;
+        sh:datatype xsd:string ;
+        sh:maxLength 255 ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+    ] ;
+    sh:property [
+        sh:path ech-0261:designationFra ;
+        sh:datatype xsd:string ;
+        sh:maxLength 255 ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+    ] ;
+    sh:property [
+        sh:path ech-0261:designationIta ;
+        sh:datatype xsd:string ;
+        sh:maxLength 255 ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+    ] ;
+    sh:property [
+        sh:path ech-0261:designationEng ;
+        sh:datatype xsd:string ;
+        sh:maxLength 255 ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+    ] ;
+    sh:property [
+        sh:path ech-0261:designationLat ;
+        sh:datatype xsd:string ;
+        sh:maxLength 255 ;
+        sh:maxCount 1 ;
+    ] ;
+    sh:property [
+        sh:path ech-0261:explanation ;
+        sh:datatype xsd:string ;
+        sh:maxLength 2000 ;
+        sh:maxCount 1 ;
+    ] .
+
+ech-0261:MeasurementShape a sh:NodeShape ;
+    sh:targetClass ech-0261:Measurement ;
+    sh:property [
+        sh:path ech-0261:value ;
+        sh:datatype xsd:decimal ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+    ] ;
+    sh:property [
+        sh:path ech-0261:unit ;
+        sh:node ech-0261:UnitTypeShape ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+    ] ;
+    sh:property [
+        sh:path ech-0261:unitName ;
+        sh:datatype xsd:string ;
+        sh:maxLength 50 ;
+        sh:maxCount 1 ;
+    ] .
+
+ech-0261:ValidityShape a sh:NodeShape ;
+    sh:targetClass ech-0261:Validity ;
+    sh:property [
+        sh:path ech-0261:validFromInclusive ;
+        sh:datatype xsd:date ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+    ] ;
+    sh:property [
+        sh:path ech-0261:validToExclusive ;
+        sh:datatype xsd:date ;
+        sh:maxCount 1 ;
+    ] ;
+    sh:property [
+        sh:path ech-0261:supersedesId ;
+        sh:node ech-0261:IdentifierShape ;
+        sh:maxCount 1 ;
+    ] ;
+    sh:property [
+        sh:path ech-0261:supersededById ;
+        sh:node ech-0261:IdentifierShape ;
+        sh:maxCount 1 ;
+    ] .
+
+ech-0261:EnumeratedItemShape a sh:NodeShape ;
+    sh:targetClass ech-0261:EnumeratedItem ;
+    sh:property [
+        sh:path ech-0261:code ;
+        sh:datatype xsd:string ;
+        sh:maxLength 50 ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+    ] ;
+    sh:property [
+        sh:path ech-0261:descriptor ;
+        sh:node ech-0261:DescriptorShape ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+    ] ;
+    sh:property [
+        sh:path ech-0261:validity ;
+        sh:node ech-0261:ValidityShape ;
+        sh:maxCount 1 ;
+    ] .
+
+# ---------------------------------------------------------------------------
+# Root Element
+# ---------------------------------------------------------------------------
+ech-0261:RootShape a sh:NodeShape ;
+    sh:targetClass ech-0261:Root ;
+    sh:property [
+        sh:path ech-0261:rootElement ;
+        sh:node ech-0261:LegalUnitShape ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+    ] .
